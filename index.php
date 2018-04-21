@@ -19,8 +19,8 @@ include 'includes/header.php';
   </div>
   <div class="overlaytext">
      Dear freelancers, Help is here! Millions of jobs online ready for grab.
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Get Hired &raquo;</a>
-      <a href="http://asp.net" class="btn btn-primary btn-lg">Hire Experts &raquo;</a>
+    <p><a href="projects/allprojects.php" class="btn btn-primary btn-lg">Get Hired &raquo;</a>
+      <a href="projects/allprojects.php" class="btn btn-primary btn-lg">Hire Experts &raquo;</a>
     </p>
   </div>
 </div>
@@ -75,7 +75,6 @@ include 'includes/header.php';
 
     <div class="second body-content">
         <h2>Featured Projects</h2>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
 </html>

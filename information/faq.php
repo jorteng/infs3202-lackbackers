@@ -1,7 +1,7 @@
 <!-- Main Home File -->
 <?php
 require_once '../database/db_connect.php';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <!DOCTYPE html>

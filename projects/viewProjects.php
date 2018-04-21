@@ -2,7 +2,7 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-include 'includes/header.php';
+include '../includes/header.php';
 
 //Define variables and initialize with empty values
 $username = $password = "";
