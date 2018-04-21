@@ -1,8 +1,8 @@
 <?php
+$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
 //Connect to db
 require_once '../database/db_connect.php';
-include '../includes/header.php';
-
+require '../includes/header.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,3 +45,7 @@ function showUser(str) {
 
 </body>
 </html>
+
+<?php
+require '../includes/footer.php';
+?>

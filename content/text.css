@@ -1,3 +1,4 @@
+/* Override the default bootstrap behavior including the size, color of the nav bar */
 .navbar-inverse {
     background-color: #061551 !important;
     border-color: #061551;
@@ -15,6 +16,7 @@
         background-color: transparent;
 }
 
+/* Video container format that covering the whole wide */
 .video-container {
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   position: relative;
@@ -24,6 +26,7 @@
   overflow: hidden;
 }
 
+/* create an overlay over the video */
 .overlay{
   top:0;
   filter: opacity(30%);
@@ -31,6 +34,7 @@
   overflow: hidden;
 }
 
+/* Overide the jumbotron vies */
 .jumbotron{
   background-color: #2C1A55 !important;
   padding-bottom: 0px !important;
@@ -38,7 +42,7 @@
 
 }
 
-
+/* Text written on the overlay */
 .overlaytext{
   position: absolute;
   top: 60%;
@@ -50,6 +54,7 @@
 
 }
 
+/* Second section after jumbotron */
 .second{
       padding: 60px;
       background-color: #FFFFFF;
@@ -60,14 +65,17 @@
 
 }
 
+/* Icon size on the index.php */
 .hicon{
     font-size: 60px;
 }
 
+/* Text size on the index.php for the icon description */
 .headtext{
     font-weight:bold;
 }
 
+/* Getting the textarea within the padding */
 .bodytext {
     padding-left: 30px;
     padding-right: 30px;
@@ -83,7 +91,7 @@
   background-color: #2C1A55 !important;
 }
 
-#myInput {
+/* #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
@@ -111,4 +119,4 @@
 
 #myUL li a:hover:not(.header) {
   background-color: #eee;
-}
+} */

@@ -1,7 +1,8 @@
 <!-- Main Home File -->
 <?php
+$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
 require_once '../database/db_connect.php';
-include '../includes/header.php';
+require '../includes/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -65,5 +66,5 @@ include '../includes/header.php';
 </html>
 
 <?php
-include 'includes/footer.php';
+require '../includes/footer.php';
 ?>

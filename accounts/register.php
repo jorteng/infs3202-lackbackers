@@ -1,7 +1,8 @@
 <?php
 //Connect to db
+$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
 require_once '../database/db_connect.php';
-include 'includes/header.php';
+include '../includes/header.php';
 
 //Define variables and initialize with empty values
 $email = $password = $confirm_password =  "";

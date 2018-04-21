@@ -1,5 +1,6 @@
 <!-- Login Page File -->
 <?php
+$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
 //Connect to db
 require_once '../database/db_connect.php';
 include '../includes/header.php';
