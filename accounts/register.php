@@ -1,8 +1,9 @@
 <?php
 //Connect to db
-$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
+// $GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
+$GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 require_once '../database/db_connect.php';
-include '../includes/header.php';
+require '../includes/header.php';
 
 //Define variables and initialize with empty values
 $email = $password = $confirm_password =  "";
