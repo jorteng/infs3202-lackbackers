@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <title>Lackbackers Platform</title>
-  <link rel="icon" href="images/favicon.png" type="http://localhost/infs3202-lackbackers/image/png">
+  <link rel="icon" href="<?php echo $GLOBALS['URL']?>images/favicon.png" type="image/png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-  <link rel="stylesheet" href="http://localhost/infs3202-lackbackers/content/text.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/text.css" type="text/css">
 
     <script>
         function openNav() {
@@ -54,7 +54,7 @@
                 </button>
             </div>
             <div>
-                 <link rel="shortcut icon" href="http://localhost/infs3202-lackbackers/images/favicon.png" /><a href="index.php"></a>
+                 <link rel="shortcut icon" href="<?php echo $GLOBALS['URL']?>images/favicon.png" /><a href="index.php"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
