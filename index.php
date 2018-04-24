@@ -4,11 +4,10 @@
 $GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 require_once 'database/db_connect.php';
 require 'includes/header.php';
+session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <script>
   var slideIndex = 1;
@@ -17,11 +16,9 @@ require 'includes/header.php';
   function plusDivs(n) {
     showDivs(slideIndex += n);
   }
-
   function currentDiv(n) {
     showDivs(slideIndex = n);
   }
-
   function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -34,14 +31,13 @@ require 'includes/header.php';
     for (i = 0; i < dots.length; i++) {
        dots[i].className = dots[i].className.replace(" w3-white", "");
     }
-
     x[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " w3-white";
 }
 </script>
-
 </head>
 
+<body>
 <div class="jumbotron">
   <!-- <div class="overlay">
       <div class="w3-content w3-display-container" style="max-width:800px">
@@ -61,8 +57,8 @@ require 'includes/header.php';
 
   <div class="overlaytext">
      Dear freelancers, Help is here! Millions of jobs online ready for grab.
-    <p><a href="<?php echo $GLOBALS['URL']?>projects/allprojects.php" class="btn btn-primary btn-lg">Get Hired &raquo;</a>
-      <a href="<?php echo $GLOBALS['URL']?>projects/myprojects.php" class="btn btn-primary btn-lg">Hire Experts &raquo;</a>
+    <p><a href="<?php echo $GLOBALS['URL']?>accounts/register.php" class="btn btn-primary btn-lg">Get Hired &raquo;</a>
+      <a href="<?php echo $GLOBALS['URL']?>accounts/register.php" class="btn btn-primary btn-lg">Hire Experts &raquo;</a>
     </p>
   </div>
 </div>
@@ -119,6 +115,7 @@ require 'includes/header.php';
         <h2>Featured Projects</h2>
     </div>
 </div>
+</body>
 </html>
 
 <?php
