@@ -9,26 +9,16 @@ require '../includes/header.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="content/text.css" type="text/css">
-
-  <script>
-  function openNav() {
-    document.getElementById("slideBar").style.width = "300px";
-    document.getElementById("main").style.marginLeft = "300px";
+  <style>
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
   }
-  function closeNav() {
-    document.getElementById("slideBar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
+  #map {
+    height: 500px;
+    width: 500px;
   }
-  </script>
+  </style>
 </head>
 
 <body>

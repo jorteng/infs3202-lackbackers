@@ -15,14 +15,6 @@
   <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/text.css" type="text/css">
 
     <script>
-        function openNav() {
-            document.getElementById("slideBar").style.width = "300px";
-            document.getElementById("main").style.marginLeft = "300px";
-        }
-        function closeNav() {
-            document.getElementById("slideBar").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-        }
         function myFunction() {
             var input, filter, ul, li, a, i;
             input = document.getElementById("myInput");
@@ -67,7 +59,6 @@
                 <!-- <li><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></li>
                 <li><input type="image" src="<?php echo $GLOBALS['URL']?>images/search.png" alt="Submit" width="18" height="18" style="color="white""></li> -->
                 <li><a href="<?php echo $GLOBALS['URL']?>accounts/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><a href="<?php echo $GLOBALS['URL']?>accounts/register.php"> Register</a></li>
                 </ul>
             </div>
         </div>
