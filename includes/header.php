@@ -66,9 +66,15 @@ session_start();
                 <li><a href="<?php echo $GLOBALS['URL']?>accounts/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <?php } ?>
                 <?php if (isset($_SESSION['email'])) { ?>
-                <li><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p></button>
+                  <div class="dropdown-content">
+                    <a href="#">My Projects</a>
+                    <a href="#">Settings</a>
+                    <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php" class="btn btn-danger">Sign Out</a>
+                  </div>
+                </div>
 
-                  <p><a href="<?php echo $GLOBALS['URL']?>accounts/logout.php" class="btn btn-danger">Sign Out</a></p>
                   <?php } ?>
                 </ul>
             </div>
