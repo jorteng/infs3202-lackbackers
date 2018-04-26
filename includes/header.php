@@ -57,6 +57,7 @@ session_start();
                     <li><a href="<?php echo $GLOBALS['URL']?>projects/allprojects.php">Projects</a></li>
                     <li><a href="<?php echo $GLOBALS['URL']?>information/aboutus.php">About Us</a></li>
                     <li><a href="<?php echo $GLOBALS['URL']?>information/faq.php">FAQ</a></li>
+                    <li><a href="<?php echo $GLOBALS['URL']?>information/rss.php">RSS</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 <li><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></li>

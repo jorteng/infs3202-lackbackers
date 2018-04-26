@@ -91,10 +91,6 @@
   background-color: #2C1A55 !important;
 }
 
-.p {
-  color: white;
-}
-
 /* #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -112,7 +108,7 @@
 
 #myUL li a {
   border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
+  margin-top: -1px; /* Prevent double borders
   background-color: #f6f6f6;
   padding: 12px;
   text-decoration: none;
