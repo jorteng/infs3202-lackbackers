@@ -91,6 +91,10 @@
   background-color: #2C1A55 !important;
 }
 
+.p {
+  color: white;
+}
+
 /* #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;

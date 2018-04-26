@@ -5,6 +5,7 @@ $GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 //Connect to db
 require_once '../database/db_connect.php';
 include '../includes/header.php';
+session_start();
 
 //Define variables and initialize with empty values
 $email = $password = "";
@@ -51,12 +52,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: /lackbackers");
                         } else{
                             //Display password invalid error message
-                            $password_err = 'Incorrect Password.';
+                            $password_err = 'Login attempt fail.';
                         }
                     }
                 } else{
                     //Display email doesn't exist error message
-                    $email_err = 'No account found with email entered.';
+                    $email_err = 'Login attempt fail.';
                 }
             } else{
                 echo "Something went wrong. Please try again later.";

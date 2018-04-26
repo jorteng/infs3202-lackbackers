@@ -1,4 +1,7 @@
 <!-- Shared Header -->
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,9 +59,16 @@
                     <li><a href="<?php echo $GLOBALS['URL']?>information/faq.php">FAQ</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <!-- <li><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></li>
-                <li><input type="image" src="<?php echo $GLOBALS['URL']?>images/search.png" alt="Submit" width="18" height="18" style="color="white""></li> -->
+                <li><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></li>
+                <li><input type="image" src="<?php echo $GLOBALS['URL']?>images/search.png" alt="Submit" width="18" height="18" style="color="white""></li>
+                <?php if(!isset($_SESSION['email']) || empty($_SESSION['email'])){ ?>
                 <li><a href="<?php echo $GLOBALS['URL']?>accounts/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php } ?>
+                <?php if (isset($_SESSION['email'])) { ?>
+                <li><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p></li>
+
+                  <p><a href="<?php echo $GLOBALS['URL']?>accounts/logout.php" class="btn btn-danger">Sign Out</a></p>
+                  <?php } ?>
                 </ul>
             </div>
         </div>
