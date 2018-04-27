@@ -32,17 +32,17 @@ function showUser(str) {
 </script>
 </head>
 <body>
-
-<form>
-<select name="projects" onchange="showUser(this.value)">
-  <?php while($row1 = mysqli_fetch_array($resultProjectList)):;?>
-    <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
-  <?php endwhile;?>
-</select>
-</form>
-<br>
-<div id="txtHint"><b>Project info:</b></div>
-
+<div class="second">
+  <form>
+    <select name="projects" onchange="showUser(this.value)">
+      <?php while($row1 = mysqli_fetch_array($resultProjectList)):;?>
+        <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+      <?php endwhile;?>
+    </select>
+  </form>
+  <br>
+  <div id="txtHint"><b>Project info:</b></div>
+</div>
 </body>
 </html>
 

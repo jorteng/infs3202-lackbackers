@@ -130,7 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <body>
-
+        <div class="second">
         <div id="" class="col-sm-4"></div>
         <div id="registeration" class="col-sm-3">
         <h2>Registration</h2>
@@ -168,6 +168,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>
+  </div>
 
 
 </body>

@@ -32,15 +32,16 @@ function showRSS(str) {
 </script>
 </head>
 <body>
-
-<form>
-<select onchange="showRSS(this.value)">
-<option value="">Select an RSS-feed:</option>
-<option value="Test">Test</option>
-<option value="NBC">NBC News</option>
-</select>
-</form>
-<br>
-<div id="rssOutput">RSS-feed will be listed here...</div>
+<div class="second">
+  <form>
+    <select onchange="showRSS(this.value)">
+      <option value="">Select an RSS-feed:</option>
+      <option value="Test">Test</option>
+      <option value="NBC">NBC News</option>
+    </select>
+  </form>
+  <br>
+  <div id="rssOutput">RSS-feed will be listed here...</div>
+</div>
 </body>
 </html>

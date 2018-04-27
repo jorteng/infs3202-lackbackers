@@ -9,17 +9,6 @@ require '../includes/header.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  #map {
-    height: 500px;
-    width: 1080px;
-  }
-  </style>
-
   <script>
     function initMap() {
       var lackBack = new google.maps.LatLng(-27.4983477, 153.0123124);
@@ -47,9 +36,10 @@ require '../includes/header.php';
 </head>
 
 <body>
-
-  <h3>Lackbackers Headquarters</h3>
-  <div align="center" id="map"></div>
+  <div class="second">
+    <h3>Lackbackers Headquarters</h3>
+    <div align="center" id="map"></div>
+  </div>
 
 
 </body>

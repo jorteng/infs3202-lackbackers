@@ -74,6 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <body>
+        <div class="second">
         <div class="col-sm-4"></div>
         <div class="col-sm-3">
         <h2>Login</h2>
@@ -94,6 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Don't have an account? <a href="register.php">Register with Us!</a></p>
         </form>
         </div>
+      </div>
 
 
 </body>
