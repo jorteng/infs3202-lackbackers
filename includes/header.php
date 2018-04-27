@@ -67,11 +67,11 @@ session_start();
                 <?php } ?>
                 <?php if (isset($_SESSION['email'])) { ?>
                 <div class="dropdown">
-                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p></button>
+                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
                   <div class="dropdown-content">
                     <a href="#">My Projects</a>
                     <a href="#">Settings</a>
-                    <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php" class="btn btn-danger">Sign Out</a>
+                    <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php">Sign Out</a>
                   </div>
                 </div>
 
