@@ -16,7 +16,7 @@ echo "<table>
 while($row = mysqli_fetch_array($ajaxProjectlistresult)) {
     echo "<tr>";
     echo "<td>" . $row['project_title'] . "</td>";
-    echo "<td>" . $row['project_owner'] . "</td>";
+    echo "<td>" . $row['companyName'] . "</td>";
     echo "<td>" . $row['project_desc'] . "</td>";
     echo "</tr>";
 }
