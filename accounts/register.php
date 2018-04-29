@@ -1,13 +1,12 @@
 <?php
 //Connect to db
-// $GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
-$GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 require_once '../database/db_connect.php';
 require '../includes/header.php';
 
 //Define variables and initialize with empty values
 $email = $password = $confirm_password =  "";
 $email_err = $password_err = $confirm_password_err = "";
+$userType_err = "";
 
 //Process form data
 if($_SERVER["REQUEST_METHOD"] == "POST"){
