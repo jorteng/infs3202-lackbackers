@@ -77,7 +77,7 @@ session_start();
                   <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
                   <div class="dropdown-content">
                     <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
-					<a href="#">My Projects</a>
+                    <a href="<?php echo $GLOBALS['URL']?>projects/myprojects.php">My Projects</a>
 					<?php if($_SESSION['userType']==1){?>
 					<a href="<?php echo $GLOBALS['URL']?>projects/createProject.php">Create Project</a> <?php } ?>
                     <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php">Sign Out</a>

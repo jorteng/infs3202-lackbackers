@@ -2,11 +2,20 @@
 //Connect to db
 require_once '../database/db_connect.php';
 require '../includes/header.php';
+session_start();
+$own_id =	$_SESSION['own_id'];
+//Dropdown list for Project Selection
+if($_SESSION['userType']==1){
+  $queryProject = "SELECT * FROM `projects` where owner_id = $own_id";
+  $resultProjectList = mysqli_query($link, $queryProject);
+}
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+
+
 <script>
 function showUser(str) {
   if (str=="") {
@@ -24,23 +33,26 @@ function showUser(str) {
       document.getElementById("txtHint").innerHTML=this.responseText;
     }
   }
-  xmlhttp.open("GET","getproject.php?q="+str,true);
+  xmlhttp.open("GET","getmyproject.php?q="+str,true);
   xmlhttp.send();
 }
 </script>
 </head>
+
 <body>
 <div class="second">
   <form>
-    <select name="projects" onchange="showUser(this.value)">
-      <?php while($row1 = mysqli_fetch_array($resultProjectList)):;?>
-        <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
-      <?php endwhile;?>
-    </select>
-  </form>
-  <br>
-  <div id="txtHint"><b>Project info:</b></div>
+      <select name="projects" onchange="showUser(this.value)">
+        <option value="">Select a project</option>
+        <?php while($row1 = mysqli_fetch_array($resultProjectList)):;?>
+          <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+        <?php endwhile;?>
+      </select>
+</form>
+
+  <div id="txtHint"></div>
 </div>
+
 </body>
 </html>
 

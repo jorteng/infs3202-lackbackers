@@ -29,7 +29,7 @@ function showUser(str) {
       document.getElementById("txtHint").innerHTML=this.responseText;
     }
   }
-  xmlhttp.open("GET","getproject.php?q="+str,true);
+  xmlhttp.open("GET","getallproject.php?q="+str,true);
   xmlhttp.send();
 }
 </script>
@@ -39,6 +39,7 @@ function showUser(str) {
 <div class="second">
   <form>
       <select name="projects" onchange="showUser(this.value)">
+        <option value="">Select a project</option>
         <?php while($row1 = mysqli_fetch_array($resultProjectList)):;?>
           <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
         <?php endwhile;?>
