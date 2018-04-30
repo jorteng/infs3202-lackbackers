@@ -1,7 +1,7 @@
 <!-- Shared Header -->
 <?php
-$GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
-// $GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
+// $GLOBALS['URL'] = "http://localhost/lackbackers/";
+$GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -74,12 +74,12 @@ session_start();
                 <?php } ?>
                 <?php if (isset($_SESSION['email'])) { ?>
                 <div class="dropdown">
-                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
+                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
                   <div class="dropdown-content">
-                    <a href="#">My Projects</a>
                     <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
+					<a href="#">My Projects</a>
 					<?php if($_SESSION['userType']==1){?>
-					<a href="<?php echo $GLOBALS['URL']?>">Create Profile</a> <?php } ?>
+					<a href="<?php echo $GLOBALS['URL']?>projects/createProject.php">Create Project</a> <?php } ?>
                     <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php">Sign Out</a>
                   </div>
                 </div>
