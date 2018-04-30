@@ -201,6 +201,22 @@ require 'includes/header.php';
     </div>
   </div>
 </div>
+<div class="second">
+  <section class="section_0">
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Mobile Development</p></center>
+    </div>
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Website Development</p></center>
+    </div>
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Designers & Creatives</p></center>
+    </div>
+    <div class="col-sm-3">
+       <center><div class="circle"><a href="#section_4"></a></div><p>Writers</p></center>
+    </div>
+   </section>
+  </div>
 <div class="thead">
         <div class="col-md-4">
             <center>
@@ -224,22 +240,6 @@ require 'includes/header.php';
           <center>
         </div>
 </div>
-<div class="second">
-  <section class="section_0">
-    <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Mobile Development</p></center>
-    </div>
-    <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Website Development</p></center>
-    </div>
-    <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Designers & Creatives</p></center>
-    </div>
-    <div class="col-sm-3">
-       <center><div class="circle"><a href="#section_4"></a></div><p>Writers</p></center>
-    </div>
-   </section>
-  </div>
 </div>
 </body>
 </html>

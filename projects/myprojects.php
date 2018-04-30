@@ -10,6 +10,11 @@ if($_SESSION['userType']==1){
   $resultProjectList = mysqli_query($link, $queryProject);
 }
 
+else if($_SESSION['userType']==2){
+  $queryProject = "SELECT * FROM `projects` where owner_id = $own_id";
+  $resultProjectList = mysqli_query($link, $queryProject);
+}
+
 ?>
 <!DOCTYPE html>
 <html>
