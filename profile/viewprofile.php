@@ -19,8 +19,9 @@ require '../includes/header.php';
         <img align="left" class="fb-image-lg" src="<?php echo $GLOBALS['URL']?>images/slide3.png" alt="Profile image example" width=100%/ height=50%>
         <img align="left" class="fb-image-profile thumbnail" style="margin-top: -60px; margin-left:100px" src="<?php echo $GLOBALS['URL']?>images/pp.jpg" alt="Profile image example" width=200 height=200/>
         <div class="fb-profile-text">
-            <h1>Rachel Roesly</h1>
-            <h2>Description about yourself (Username,location,contact info,summary,rate per hour, % jobs completed, % on budget, % on time, % repeat hire )</h2>
+            <h1>Rachel Roesly @racroesly</h1>
+            <h2>Have been in the industry for several years
+               (Username,location,contact info,summary)</h2>
         </div>
     </div>
   </div>
@@ -214,43 +215,31 @@ require '../includes/header.php';
   <div class="col-sm-4">
    <div class="panel panel-default">
     <div class="menu_title">
-       Horoscope
+       Qualification Reports
     </div>
     <div class="panel-body">
         <div class="row">
             <div class="col-lg-12">
                  <div class="form-group">
-                     <label for="email">Place of Birth:</label>
-                      <p> pune, maharashtra</p>
+                     <label for="email">Rate per hours:</label>
+                      <p>$40/hour</p>
                  </div>
                   <div class="form-group">
-                      <label for="email">Date of Birth:</label>
-                      <p> 26 Sep 2017</p>
+                      <label for="email">% jobs completed:</label>
+                      <p>45</p>
                   </div>
                   <div class="form-group">
-                      <label for="email">Time of Birth:</label>
-                      <p> 11:20 min.</p>
+                      <label for="email">% on budget:</label>
+                      <p>50</p>
                   </div>
                    <div class="form-group">
-                      <label for="email">Horroscoe Match not Necessory</label>
+                      <label for="email">% on time:</label>
+                      <p>40</p>
                    </div>
                     <div class="form-group">
-                      <label for="email">Sun Sign:</label>
-                      <p> Scorpio</p>
+                      <label for="email">% repeat hire:</label>
+                      <p>60</p>
                     </div>
-                    <div class="form-group">
-                      <label for="email">Rashi/ Moon sign:</label>
-                      <p> Mesh</p>
-                    </div>
-                     <div class="form-group">
-                      <label for="email">Nakshtra:</label>
-                      <p> Bharani</p>
-                    </div>
-                      <div class="form-group">
-                      <label for="email">Manglik:</label>
-                      <p> Manglik</p>
-                    </div>
-                <button type="submit" class="btn btn-danger btn-block">Submit</button>
             </div>
         </div>
     </div>
