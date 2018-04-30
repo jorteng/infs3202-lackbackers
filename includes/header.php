@@ -62,8 +62,13 @@ session_start();
                     <li><a href="<?php echo $GLOBALS['URL']?>information/rss.php">RSS</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></li>
-                <li><input type="image" src="<?php echo $GLOBALS['URL']?>images/search.png" alt="Submit" width="18" height="18" style="color="white""></li>
+                  <li><form class="navbar-form" role="search">
+                      <div class="input-group">
+                        <input type="text" id="myinput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="border: 6px solid white;">
+                        <div class="input-group-btn"><button class="btn btn-primary" type="submit"><i class=" glyphicon glyphicon-search"></i></button></div>
+                      </div>
+                    </form>
+                  </li>
                 <?php if(!isset($_SESSION['email']) || empty($_SESSION['email'])){ ?>
                 <li><a href="<?php echo $GLOBALS['URL']?>accounts/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <?php } ?>
@@ -72,6 +77,7 @@ session_start();
                   <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
                   <div class="dropdown-content">
                     <a href="#">My Projects</a>
+                    <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
                     <a href="#">Settings</a>
                     <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php">Sign Out</a>
                   </div>
