@@ -201,16 +201,7 @@ require 'includes/header.php';
     </div>
   </div>
 </div>
-
-  <!-- <div class="overlaytext">
-     Dear freelancers, Help is here! Millions of jobs online ready for grab.
-    <p><a href="<?php echo $GLOBALS['URL']?>accounts/register.php" class="btn btn-primary btn-lg">Get Hired &raquo;</a>
-      <a href="<?php echo $GLOBALS['URL']?>accounts/register.php" class="btn btn-primary btn-lg">Hire Experts &raquo;</a>
-    </p>
-  </div>
-</div> -->
-
-<div class="second">
+<div class="thead">
         <div class="col-md-4">
             <center>
             <span class="glyphicon glyphicon-plus hicon"></span>&nbsp;
@@ -233,34 +224,22 @@ require 'includes/header.php';
           <center>
         </div>
 </div>
-    <div class="thead">
-      <h2>Top Categories</h2>
-        <div class="col-md-4">
-          <center>
-            <span class="glyphicon glyphicon-plus hicon"></span>&nbsp;
-            <h3 class="headtext">100% Satisfaction</h3>&nbsp;
-            <p class="bodytext">Simply sign up for the posted job and ready to get your competitive bids within minutes!</p>
-          </center>
-        </div>
-      <div class="col-md-4">
-        <center>
-          <span class="glyphicon glyphicon-cloud hicon"></span>&nbsp;
-          <h3 class="headtext">On-the-go</h3>&nbsp;
-          <p class="bodytext">Many jobs to sign up from different industries. Starting from web design to admin.</p>
-        </center>
-      </div>
-      <div class="col-md-4">
-        <center>
-          <span class="glyphicon glyphicon-bell hicon"></span>&nbsp;
-          <h3 class="headtext">24/7 Availability</h3>&nbsp;
-          <p class="bodytext">We provide 24/7 supports to have a live chat with the freelancers for any updates on the work.</p>
-          <center>
-      </div>
+<div class="second">
+  <section class="section_0">
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Mobile Development</p></center>
     </div>
-
-    <div class="second body-content">
-        <h2>Featured Projects</h2>
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Website Development</p></center>
     </div>
+    <div class="col-sm-3">
+      <center><div class="circle"><a href="#section_4"></a></div><p>Designers & Creatives</p></center>
+    </div>
+    <div class="col-sm-3">
+       <center><div class="circle"><a href="#section_4"></a></div><p>Writers</p></center>
+    </div>
+   </section>
+  </div>
 </div>
 </body>
 </html>
