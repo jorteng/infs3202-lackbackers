@@ -8,6 +8,11 @@ $email = $password = $confirm_password =  "";
 $email_err = $password_err = $confirm_password_err = "";
 $userType_err = "";
 
+
+//Dropdown list for Registration
+$queryAccType = "SELECT * FROM `accounts_type`";
+$resultAccTypeList = mysqli_query($link, $queryAccType);
+
 //Process form data
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //Validate email

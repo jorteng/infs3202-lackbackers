@@ -2,10 +2,15 @@
 //Connect to db
 require_once '../database/db_connect.php';
 require '../includes/header.php';
+
+//Dropdown list for Project Selection
+$queryProject = "SELECT * FROM `projects`";
+$resultProjectList = mysqli_query($link, $queryProject);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+
 
 <script>
 function showUser(str) {
