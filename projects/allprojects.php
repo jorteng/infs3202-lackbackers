@@ -40,7 +40,7 @@ function showUser(str) {
       </select>
 </form>
 
-  <div id="txtHint"><b>Project info:</b></div>
+  <div id="txtHint"></div>
 </div>
 
 </body>

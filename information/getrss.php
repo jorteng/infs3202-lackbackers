@@ -6,8 +6,8 @@ $q=$_GET["q"];
 if($q=="Test") {
 $xml=("http://www.careersonline.com.au/RSS/Jobs-Information_Technology_Jobs.xml");
 //  $xml=("http://news.google.com/news?ned=us&topic=h&output=rss");
-} elseif($q=="NBC") {
-  $xml=("http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml");
+//} elseif($q=="NBC") {
+//  $xml=("http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml");
 }
 
 $xmlDoc = new DOMDocument();

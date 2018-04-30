@@ -78,7 +78,6 @@ session_start();
                   <div class="dropdown-content">
                     <a href="#">My Projects</a>
                     <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
-                    <a href="#">Settings</a>
                     <a href="<?php echo $GLOBALS['URL']?>accounts/logout.php">Sign Out</a>
                   </div>
                 </div>
