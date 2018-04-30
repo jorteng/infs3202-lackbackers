@@ -98,13 +98,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     //Check input errors before inserting in database
-    if(empty($email_err) && empty($password_err)){
+    if(empty($email_err) && empty($password_err) && empty($userType_err)){
         //Insert statement
-        $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (email, password, userTypeID) VALUES (?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             //Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssi", $param_email, $param_password, $param_userType);
 
             $option = [
               'cost' => 10,
@@ -114,6 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             //Set parameters
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_BCRYPT, $option);
+			$param_userType = $userType;
 
             //Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
