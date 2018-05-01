@@ -3,7 +3,7 @@
 require_once '../database/db_connect.php';
 require '../includes/header.php';
 session_start();
-$own_id =	$_SESSION['own_id'];
+$own_id = $_SESSION['own_id'];
 //Dropdown list for Project Selection
 if($_SESSION['userType']==1){
   $queryProject = "SELECT * FROM `projects` where owner_id = $own_id";
@@ -11,7 +11,7 @@ if($_SESSION['userType']==1){
 }
 
 else if($_SESSION['userType']==2){
-  $queryProject = "SELECT * FROM `projects` where owner_id = $own_id";
+  $queryProject = "SELECT * from projects WHERE project_id IN (SELECT projectID from freelancerProjects WHERE freelancerID = $own_id)";
   $resultProjectList = mysqli_query($link, $queryProject);
 }
 

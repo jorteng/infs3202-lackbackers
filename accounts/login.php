@@ -61,7 +61,7 @@ if ($_POST) {
             $result = $stmt->get_result();
             $freelancer = $result->fetch_assoc();
 			$name = $freelancer['firstName'];
-			$own_id = $freelancer['freelancer_id'];
+			$own_id = $freelancer['freelance_id'];
 		}
 		$_SESSION['email'] = $email;
 		$_SESSION['userType'] = $user_type;
