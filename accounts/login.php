@@ -38,7 +38,7 @@ if ($_POST) {
     } else {
         // log user in
 		$email = $user['email'];
-        $user_id = $user['userID'];
+    $user_id = $user['userID'];
 		$user_type = $user['userTypeID'];
 		//get owner's details
 		if($user_type == 1)
@@ -50,7 +50,6 @@ if ($_POST) {
             $result = $stmt->get_result();
             $owner = $result->fetch_assoc();
 			$name = $owner['companyName'];
-      $firstname = $owner['companyName'];
 			$own_id = $owner['owner_id'];
       $address = $owner['address'];
       $city = $owner['city'];
@@ -64,7 +63,6 @@ if ($_POST) {
 			$stmt->execute();
             $result = $stmt->get_result();
             $freelancer = $result->fetch_assoc();
-			$firstname = $freelancer['firstName'];
 			$own_id = $freelancer['freelance_id'];
       $name = $freelancer['fullName'];
       $position = $freelancer['position'];
@@ -78,7 +76,6 @@ if ($_POST) {
     $_SESSION['address'] = $address;
     $_SESSION['city'] = $city;
     $_SESSION['country'] = $country;
-    $_SESSION['firstName'] = $firstname;
     $_SESSION['position'] = $position;
     $_SESSION['description'] = $description;
 

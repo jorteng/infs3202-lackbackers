@@ -1,6 +1,6 @@
 <!-- Shared Header -->
 <?php
-// $GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
+// $GLOBALS['URL'] = "http://localhost/lackbackers/";
 $GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";
 session_start();
 ?>
@@ -76,7 +76,7 @@ session_start();
                 <?php } ?>
                 <?php if (isset($_SESSION['email'])) { ?>
                 <div class="dropdown">
-                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['firstName']); ?></b><span class="glyphicon glyphicon-menu-down"></span></p></button>
+                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b><span class="glyphicon glyphicon-menu-down"></span></p></button>
                   <div class="dropdown-content">
                     <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
                     <a href="<?php echo $GLOBALS['URL']?>projects/myprojects.php">My Projects</a>
