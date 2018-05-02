@@ -16,10 +16,10 @@ require '../includes/header.php';
   <div class="container-fluid">
   <div class="row">
     <div class="fb-profile">
-        <img align="left" class="fb-image-lg" src="<?php echo $GLOBALS['URL']?>images/slide3.png" alt="Profile image example" width=100%/ height=50%>
+        <img align="left" class="fecho htmlspecialchars($_SESSION['name']); ?>b-image-lg" src="<?php echo $GLOBALS['URL']?>images/slide3.png" alt="Profile image example" width=100%/ height=50%>
         <img align="left" class="fb-image-profile thumbnail" style="margin-top: -60px; margin-left:100px" src="<?php echo $GLOBALS['URL']?>images/pp.jpg" alt="Profile image example" width=200 height=200/>
         <div class="fb-profile-text">
-            <h1>Rachel Roesly @racroesly</h1>
+            <h1>Hi, I am <?php echo htmlspecialchars($_SESSION['name']); ?> </h1>
             <h2>Have been in the industry for several years
                (Username,location,contact info,summary)</h2>
         </div>
