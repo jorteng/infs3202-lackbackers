@@ -4,18 +4,24 @@ require_once '../database/db_connect.php';
 require '../includes/header.php';
 
 //Define variables and initialize with empty values
-$title = $description = $file_url = "";
+$title = $description = $file = $file_url = "";
 $title_err = $description_err = $file_err = "";
 
 //Process form data
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+	$title = $_POST["project_title"];
+	$description = $_POST["project_desc"];
+	$file = $_FILES["file"]["tmp_name"]; 
     //Validate email
-    if(empty(trim($_POST["project_title"]))){
+    if(empty(trim($title))){
         $title_err = "Title is required.";
     } 
-	else if (empty(trim($_POST["project_desc"])))
+	if (empty(trim($description)))
 	{
 		$description_err = "Please provide some description";
+	}
+	if(empty ($file) || $FILES['file']['size'] > 1024){
+		$file_err = "Please upload a project picture.";
 	}
 	
 	//for file uploading
@@ -23,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		||($_FILES['file']['type'] == "image/pjpeg")
 		||($_FILES['file']['type'] == "image/jpg")
 		||($_FILES['file']['type'] == "image/png"))
-		&& ($_FILES['file']['size'] <50000))
+		)
 		{
 			if($_FILES['file']['error'] > 0)
 			{
@@ -57,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             //Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 //Redirect to homepage
-                header("location: /lackbackers");
+                header("location: myprojects.php");
             } else{
                 echo "Something went wrong with the project creation. Please try again later.";
             }
@@ -78,19 +84,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div id="newProject" class="col-sm-3">
         <h2>Create New Project</h2>
         <form id="newProjectForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
-            <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group <?php echo (!empty($title_err)) ? 'has-error' : ''; ?>">
                 <label>Project Title</label>
                 <input type="text" name="project_title" class="form-control" value="<?php echo $title; ?>">
                 <span class="help-block"><?php echo $title_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($description_err)) ? 'has-error' : ''; ?>">
                 <label>Description</label>
-				<textarea name="project_desc" form="newProjectForm" rows="4" cols="50" method="POST" placeholder="Enter description here..." value="<?php echo $description; ?>"></textarea>
+				<textarea name="project_desc" form="newProjectForm" rows="4" cols="50" method="POST" placeholder="Enter description here..."><?php echo $description; ?></textarea>
                 <span class="help-block"><?php echo $description_err; ?></span>
             </div>
 			<div class="form-group <?php echo (!empty($file_err)) ? 'has-error' : ''; ?>">
                 <label>Select image to upload:</label>
-				<input type="file" name="file" id="file">
+				<input type="file" name="file" id="file" value="<?php echo $file; ?>">
+				<p>*Please select file size up to 1MB only.*</p>
                 <span class="help-block"><?php echo $file_err; ?></span>
             </div>
 
