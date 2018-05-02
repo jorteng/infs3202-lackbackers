@@ -50,6 +50,7 @@ if ($_POST) {
             $result = $stmt->get_result();
             $owner = $result->fetch_assoc();
 			$name = $owner['companyName'];
+      $firstname = $owner['companyName'];
 			$own_id = $owner['owner_id'];
       $address = $owner['address'];
       $city = $owner['city'];
@@ -57,7 +58,7 @@ if ($_POST) {
 		}
 		else if($user_type == 2)
 		{
-			$stmt = $link->prepare("SELECT CONCAT(firstName,lastName) as fullName, * FROM freelancers WHERE userID= $user_id ");
+			$stmt = $link->prepare("SELECT * , CONCAT(firstName,lastName) as fullName FROM freelancers WHERE userID= $user_id ");
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
