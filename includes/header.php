@@ -76,7 +76,7 @@ session_start();
                 <?php } ?>
                 <?php if (isset($_SESSION['email'])) { ?>
                 <div class="dropdown">
-                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b><span class="glyphicon glyphicon-menu-down"></span></p></button>
+                  <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b></p><span class="glyphicon glyphicon-menu-down"></span></button>
                   <div class="dropdown-content">
                     <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
                     <a href="<?php echo $GLOBALS['URL']?>projects/myprojects.php">My Projects</a>
