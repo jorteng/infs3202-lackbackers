@@ -7,9 +7,10 @@ require 'includes/header.php';
 <html lang="en">
 <head>
   <script src="<?php echo $GLOBALS['URL']?>scripts/slider.js"></script>
-  <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/slider.css" type="slider/css">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/slider.css">
 </head>
 <body>
+  <div id=mainslider>
   <div class="slider-container">
   <div class="slider-control left inactive"></div>
   <div class="slider-control right"></div>
@@ -24,7 +25,6 @@ require 'includes/header.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Website Design costs $450</h2>
           <p class="slide__text-desc">Delivering an aesthetically pleasing website.</p>
-          <!-- retrieve the projects under website design  -->
           <a href=""
           class="slide__text-link">I want this job!</a>
         </div>
@@ -39,7 +39,6 @@ require 'includes/header.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Mobile App Design costs $510</h2>
           <p class="slide__text-desc">Create a user-friendly mobile app.</p>
-          <!-- retrieve the projects under mobile app design  -->
           <a href=""
           class="slide__text-link">I want this job!</a>
         </div>
@@ -53,8 +52,7 @@ require 'includes/header.php';
         </svg>
         <div class="slide__text">
           <h2 class="slide__text-heading">Architecture design costs $540</h2>
-          <p class="slide__text-desc">Let your creativity goes wild on the blueprint</p>
-          <!-- retrieve the projects under architecture design  -->
+          <p class="slide__text-desc">Let your creativity goes wild on the blueprint.</p>
           <a href=""
           class="slide__text-link">I want this job!</a>
         </div>
@@ -67,15 +65,15 @@ require 'includes/header.php';
           <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
         </svg>
         <div class="slide__text">
-          <h2 class="slide__text-heading">This drawing costs $320</h2>
-          <p class="slide__text-desc">Make good use of your skills that deliver a grand art</p>
-          <!-- retrieve the projects under designers and creatives design  -->
+          <h2 class="slide__text-heading">Logo Design costs $350</h2>
+          <p class="slide__text-desc">Make good use of your skills that deliver a grand art.</p>
           <a href=""
           class="slide__text-link">I want this job!</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 <div class="second">
   <section class="section_0">
