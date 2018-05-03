@@ -1,11 +1,14 @@
 <!-- Main Home File -->
 <?php
 require_once 'database/db_connect.php';
-require 'includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<?php require 'includes/resources.php';?>
+</head>
 <body>
+  <?php require 'includes/header.php';?>
   <div id=main_slider>
   <div class="slider-container">
   <div class="slider-control left inactive"></div>
@@ -111,8 +114,7 @@ require 'includes/header.php';
         </div>
 </div>
 </body>
-</html>
-
 <?php
 require 'includes/footer.php';
 ?>
+</html>

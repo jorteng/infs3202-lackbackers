@@ -2,8 +2,7 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-include '../includes/header.php';
-
+session_start();
 //Define variables and initialize with empty values
 $email = $password = $user_id = $user_type = "";
 $errors = $email_err = $password_err = $userID_err = $userType_err = "";
@@ -81,7 +80,7 @@ if ($_POST) {
     $_SESSION['position'] = $position;
     $_SESSION['description'] = $description;
     $_SESSION['fullName'] = $full_name;
-    header('location: /lackbackers');
+    header('location: /infs3202-lackbackers');
 
     }
 }
@@ -89,7 +88,11 @@ if ($_POST) {
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<?php require '../includes/resources.php';?>
+</head>
 <body>
+  <?php require '../includes/header.php';?>
         <div class="second">
         <div class="col-sm-4"></div>
         <div class="col-sm-3">
@@ -111,7 +114,5 @@ if ($_POST) {
         </form>
         </div>
       </div>
-
-
 </body>
 </html>

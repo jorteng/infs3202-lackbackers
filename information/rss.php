@@ -1,12 +1,12 @@
 <!-- RSS File -->
 <?php
 require_once '../database/db_connect.php';
-require '../includes/header.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php require '../includes/resources.php';?>
 <script>
 function showRSS(str) {
   if (str.length==0) {
@@ -30,6 +30,7 @@ function showRSS(str) {
 </script>
 </head>
 <body>
+  <?php require '../includes/header.php';?>
 <div class="second">
   <form>
     <select onchange="showRSS(this.value)">

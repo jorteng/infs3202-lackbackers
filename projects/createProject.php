@@ -1,7 +1,6 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-require '../includes/header.php';
 
 //Define variables and initialize with empty values
 $title = $description = $file = $file_url = "";
@@ -11,11 +10,11 @@ $title_err = $description_err = $file_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$title = $_POST["project_title"];
 	$description = $_POST["project_desc"];
-	$file = $_FILES["file"]["tmp_name"]; 
+	$file = $_FILES["file"]["tmp_name"];
     //Validate email
     if(empty(trim($title))){
         $title_err = "Title is required.";
-    } 
+    }
 	if (empty(trim($description)))
 	{
 		$description_err = "Please provide some description";
@@ -23,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	if(empty ($file) || $FILES['file']['size'] > 1024){
 		$file_err = "Please upload a project picture.";
 	}
-	
+
 	//for file uploading
 	if((  ($_FILES['file']['type'] == "image/jpeg")
 		||($_FILES['file']['type'] == "image/pjpeg")
@@ -78,7 +77,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<?php require '../includes/resources.php';?>
+</head>
 <body>
+	  <?php require '../includes/header.php';?>
         <div class="second">
         <div id="" class="col-sm-4"></div>
         <div id="newProject" class="col-sm-3">

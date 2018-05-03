@@ -1,7 +1,6 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-require '../includes/header.php';
 
 //Define variables and initialize with empty values
 $email = $password = $confirm_password =  "";
@@ -134,7 +133,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<?php require '../includes/resources.php';?>
+</head>
 <body>
+  <?php require '../includes/header.php';?>
         <div class="second">
         <div id="" class="col-sm-4"></div>
         <div id="registeration" class="col-sm-3">

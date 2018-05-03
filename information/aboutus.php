@@ -1,12 +1,12 @@
 <!-- About Us File -->
 <?php
 require_once '../database/db_connect.php';
-require '../includes/header.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php require '../includes/resources.php';?>
   <script>
     function initMap() {
       var lackBack = new google.maps.LatLng(-27.4983477, 153.0123124);
@@ -34,6 +34,7 @@ require '../includes/header.php';
 </head>
 
 <body>
+  <?php require '../includes/header.php';?>
   <div class="second">
     <h3>Lackbackers Headquarters</h3>
     <div align="center" id="map"></div>

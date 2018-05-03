@@ -1,7 +1,7 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-require '../includes/header.php';
+
 session_start();
 $own_id = $_SESSION['own_id'];
 //Dropdown list for Project Selection
@@ -19,8 +19,7 @@ else if($_SESSION['userType']==2){
 <!DOCTYPE html>
 <html>
 <head>
-
-
+  <?php require '../includes/resources.php';?>
 <script>
 function showUser(str) {
   if (str=="") {
@@ -45,6 +44,7 @@ function showUser(str) {
 </head>
 
 <body>
+    <?php require '../includes/header.php';?>
 <div class="second">
   <form>
       <select name="projects" onchange="showUser(this.value)">

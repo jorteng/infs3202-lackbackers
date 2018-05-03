@@ -10,8 +10,10 @@ $ajaxProjectlistresult = mysqli_query($link,$ajaxProjectlist);
 <!DOCTYPE html>
 <html>
 <head>
+  <?php require '../includes/resources.php';?>
 </head>
 <body>
+  <?php require '../includes/header.php';?>
 <table>
 <tr>
 <th>Project Title</th>

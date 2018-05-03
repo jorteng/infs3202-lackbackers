@@ -1,12 +1,12 @@
 <!-- Main Home File -->
 <?php
 require_once '../database/db_connect.php';
-require '../includes/header.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+<?php require '../includes/resources.php';?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" href="images/favicon.png" type="image/png">
@@ -21,6 +21,7 @@ require '../includes/header.php';
 </head>
 
 <body>
+<?php require '../includes/header.php';?>
 <div class= "second">
   <div class="sidenavt">
     <a href="#about">How to get hired for a project</a>
