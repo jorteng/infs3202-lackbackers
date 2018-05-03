@@ -1,7 +1,7 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
-
+session_start();
 //Define variables and initialize with empty values
 $title = $description = $file = $file_url = "";
 $title_err = $description_err = $file_err = "";
