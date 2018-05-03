@@ -80,7 +80,7 @@ if ($_POST) {
     $_SESSION['position'] = $position;
     $_SESSION['description'] = $description;
     $_SESSION['fullName'] = $full_name;
-    header('location: /infs3202-lackbackers');
+    header('location: /lackbackers');
 
     }
 }
