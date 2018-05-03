@@ -19,9 +19,10 @@ require '../includes/header.php';
         <img align="left" class="fb-image-lg" src="<?php echo $GLOBALS['URL']?>images/slide3.png" alt="Profile image example" width=100%/ height=50%>
         <img align="left" class="fb-image-profile thumbnail" style="margin-top: -60px; margin-left:100px" src="<?php echo $GLOBALS['URL']?>images/pp.jpg" alt="Profile image example" width=200 height=200/>
         <div class="fb-profile-text">
-            <h1><?php echo htmlspecialchars($_SESSION['name']); ?> </h1>
-            <h2><?php echo htmlspecialchars($_SESSION['position']); ?></h2>
-            <h3><?php echo htmlspecialchars($_SESSION['description']); ?></h3>
+            <h1><?php if ($_SESSION['userType'] == 1) {echo htmlspecialchars($_SESSION['name']);} else { echo htmlspecialchars($_SESSION['name']);}?> </h1>
+            <h2><?php if ($_SESSION['userType'] == 1) {echo htmlspecialchars($_SESSION['address']);} else { echo htmlspecialchars($_SESSION['position']);}?></h2>
+            <h2><?php if ($_SESSION['userType'] == 1) {echo htmlspecialchars($_SESSION['city']);} else { echo htmlspecialchars($_SESSION['description']);}?></h2>
+            <h2><?php if ($_SESSION['userType'] == 1) {echo htmlspecialchars($_SESSION['country']);} else { echo '';}?></h2>
             <a>(Username,location,contact info,summary)</a>
         </div>
     </div>

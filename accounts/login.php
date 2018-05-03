@@ -51,10 +51,14 @@ if ($_POST) {
             $owner = $result->fetch_assoc();
 			$name = $owner['companyName'];
 			$own_id = $owner['owner_id'];
+      $address = $owner['address'];
+      $city = $owner['city'];
+      $country = $owner['country'];
+
 		}
 		else if($user_type == 2)
 		{
-			$stmt = $link->prepare("SELECT * FROM freelancers WHERE userID= $user_id ");
+			$stmt = $link->prepare("SELECT freelance_id,firstName,lastName,position,description,userID, CONCAT(firstName,' ',lastName) as fullName FROM freelancers WHERE userID= $user_id ");
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
@@ -62,11 +66,21 @@ if ($_POST) {
             $freelancer = $result->fetch_assoc();
 			$name = $freelancer['firstName'];
 			$own_id = $freelancer['freelance_id'];
+      $position = $freelancer['position'];
+      $description = $freelancer['description'];
+      $full_name = $freelancer['fullName'];
+
 		}
 		$_SESSION['email'] = $email;
 		$_SESSION['userType'] = $user_type;
 		$_SESSION['own_id'] = $own_id;
 		$_SESSION['name'] = $name;
+    $_SESSION['address'] = $address;
+    $_SESSION['city'] = $city;
+    $_SESSION['country'] = $country;
+    $_SESSION['position'] = $position;
+    $_SESSION['description'] = $description;
+    $_SESSION['fullName'] = $full_name;
         header('location: /lackbackers');
     }
 }

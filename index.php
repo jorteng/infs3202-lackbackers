@@ -10,7 +10,7 @@ require 'includes/header.php';
   <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/slider.css">
 </head>
 <body>
-  <div id=mainslider>
+  <div id=main_slider>
   <div class="slider-container">
   <div class="slider-control left inactive"></div>
   <div class="slider-control right"></div>
@@ -113,7 +113,6 @@ require 'includes/header.php';
             <p class="bodytext">We provide 24/7 supports to have a live chat with the freelancers for any updates on the work.</p>
           <center>
         </div>
-</div>
 </div>
 </body>
 </html>
