@@ -5,10 +5,6 @@ require 'includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script src="<?php echo $GLOBALS['URL']?>scripts/slider.js"></script>
-  <link rel="stylesheet" href="<?php echo $GLOBALS['URL']?>content/slider.css">
-</head>
 <body>
   <div id=main_slider>
   <div class="slider-container">

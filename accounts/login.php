@@ -38,12 +38,12 @@ if ($_POST) {
     } else {
         // log user in
 		$email = $user['email'];
-        $user_id = $user['userID'];
+    $user_id = $user['userID'];
 		$user_type = $user['userTypeID'];
 		//get owner's details
 		if($user_type == 1)
 		{
-			$stmt = $link->prepare("SELECT * FROM project_owners WHERE userID= $user_id ");
+			$stmt = $link->prepare("SELECT * FROM project_owners WHERE userID= $user_id");
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
@@ -81,7 +81,8 @@ if ($_POST) {
     $_SESSION['position'] = $position;
     $_SESSION['description'] = $description;
     $_SESSION['fullName'] = $full_name;
-        header('location: /lackbackers');
+    header('location: /lackbackers');
+
     }
 }
 ?>
