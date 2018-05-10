@@ -37,9 +37,14 @@ session_start();
             <?php } ?>
             <?php if (isset($_SESSION['email'])) { ?>
             <div class="dropdown">
-              <button class="dropbtn"><p>Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b><span class="glyphicon glyphicon-menu-down"></span></p></button>
+              <button class="dropbtn"><p id ="refresh">Welcome, <b><?php echo htmlspecialchars($_SESSION['name']); ?></b><span class="glyphicon glyphicon-menu-down"></span></p></button>
               <div class="dropdown-content">
-                <a href="<?php echo $GLOBALS['URL']?>profile/viewprofile.php">My Profile</a>
+                <?php
+                  if ($_SESSION['userType'] == 1){
+                      echo "<a href='" . $GLOBALS['URL'] . "profile/ownerprofile.php'> My Profile </a>";
+                  } else {
+                      echo "<a href='" . $GLOBALS['URL'] . "profile/freelancerprofile.php'> My Profile </a>";
+                  }?>
                 <a href="<?php echo $GLOBALS['URL']?>projects/myprojects.php">My Projects</a>
 			<?php if($_SESSION['userType']==1){?>
 			<a href="<?php echo $GLOBALS['URL']?>projects/createProject.php">Create Project</a> <?php } ?>

@@ -53,17 +53,17 @@ if ($_POST) {
       $address = $owner['address'];
       $city = $owner['city'];
       $country = $owner['country'];
-
 		}
 		else if($user_type == 2)
 		{
-			$stmt = $link->prepare("SELECT freelance_id,firstName,lastName,position,description,userID, CONCAT(firstName,' ',lastName) as fullName FROM freelancers WHERE userID= $user_id ");
+			$stmt = $link->prepare("SELECT freelance_id,firstName,lastName,position,description,userID, CONCAT(firstName,' ',lastName) as fullName FROM freelancers WHERE userID= $user_id");
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
             $result = $stmt->get_result();
             $freelancer = $result->fetch_assoc();
 			$name = $freelancer['firstName'];
+      $last_name = $freelancer['lastName'];
 			$own_id = $freelancer['freelance_id'];
       $position = $freelancer['position'];
       $description = $freelancer['description'];
@@ -74,6 +74,7 @@ if ($_POST) {
 		$_SESSION['userType'] = $user_type;
 		$_SESSION['own_id'] = $own_id;
 		$_SESSION['name'] = $name;
+    $_SESSION['lastName'] = $last_name;
     $_SESSION['address'] = $address;
     $_SESSION['city'] = $city;
     $_SESSION['country'] = $country;
@@ -81,7 +82,7 @@ if ($_POST) {
     $_SESSION['description'] = $description;
     $_SESSION['fullName'] = $full_name;
     header('location: /lackbackers');
-    // header('location: /infs3202-lackbackers')
+    // header('location: /infs3202-lackbackers');
 
     }
 }
