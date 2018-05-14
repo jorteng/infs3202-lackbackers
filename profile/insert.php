@@ -63,9 +63,9 @@
            $_SESSION['fullName'] = $full_name;
            $output_body .= '
            <div id="details" class="fb-profile-text">
-               <h1>'.$_SESSION['fullName'].'</h1>
-               <h2>'.$_SESSION['position'].'</h2>
-               <h2>'.$_SESSION['description'].'</h2>
+               <p>'.$_SESSION['fullName'].'</p>
+               <p>'.$_SESSION['position'].'</p>
+               <p>'.$_SESSION['description'].'</p>
            </div>
            ';
          }
@@ -87,10 +87,10 @@
 
            $output_body .= '
            <div id="details" class="fb-profile-text">
-               <h1>'.$_SESSION['name'].'</h1>
-               <h2>'.$_SESSION['address'].'</h2>
-               <h2>'.$_SESSION['city'].'</h2>
-               <h2>'.$_SESSION['country'].'</h2>
+               <p>'.$_SESSION['name'].'</p>
+               <p>'.$_SESSION['address'].'</p>
+               <p>'.$_SESSION['city'].'</p>
+               <p>'.$_SESSION['country'].'</p>
            </div>
            ';
          }
