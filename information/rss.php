@@ -35,7 +35,7 @@ function showRSS(str) {
   <form>
     <select onchange="showRSS(this.value)">
       <option value="">Select an RSS-feed:</option>
-      <option value="Test">Test</option>
+      <option value="Test">IT Jobs</option>
     </select>
   </form>
   <div id="rssOutput"></div>
