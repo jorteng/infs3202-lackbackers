@@ -6,13 +6,14 @@ require_once '../database/db_connect.php';
 $queryProject = "SELECT * FROM `projects`";
 $resultProjectList = mysqli_query($link, $queryProject);
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <?php require '../includes/resources.php';?>
 <script>
 function showUser(str) {
-  if (str=="") {
+  if (str.length==0) {
     document.getElementById("txtHint").innerHTML="";
     return;
   }
@@ -32,7 +33,6 @@ function showUser(str) {
 }
 </script>
 </head>
-
 <body>
     <?php require '../includes/header.php';?>
     <div class="second">

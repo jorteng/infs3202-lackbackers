@@ -1,6 +1,7 @@
 <?php
-$q = intval($_GET['q']);
 require_once '../database/db_connect.php';
+
+$q = intval($_GET['q']);
 
 //Ajax for retrieving project list
 mysqli_select_db($link,"project_list");
@@ -15,11 +16,13 @@ $ajaxProjectlistresult = mysqli_query($link,$ajaxProjectlist);
 <body>
     <?php require '../includes/header.php';?>
 <table>
+
 <tr>
 <th>Project Title</th>
 <th>Project Owner</th>
 <th>Project Description</th>
 </tr>
+
 <?php
 while($row = mysqli_fetch_array($ajaxProjectlistresult)) {
     echo "<tr>";

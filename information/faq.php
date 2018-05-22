@@ -30,8 +30,8 @@ require_once '../database/db_connect.php';
 
   <div class="main">
     <h2>Frequently Asked Questions</h2>
-    <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-    <p>Scroll down the page to see the result.</p>
+    <p></p>
+
   </div>
 </div>
 </body>
