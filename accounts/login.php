@@ -3,6 +3,10 @@
 //Connect to db
 require_once '../database/db_connect.php';
 session_start();
+
+if(isset($_SESSION['own_id'])){
+    header("location: https://infs3202-3a14e833.uqcloud.net/lackbackers/");
+}
 //Define variables and initialize with empty values
 $email = $password = $user_id = $user_type = "";
 $errors = $email_err = $password_err = $userID_err = $userType_err = "";

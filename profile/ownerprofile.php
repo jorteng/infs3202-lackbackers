@@ -1,6 +1,15 @@
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
+
+session_start();
+
+if(!isset($_SESSION['own_id'])){
+    header("location: https://infs3202-3a14e833.uqcloud.net/lackbackers/accounts/login.php");
+}
+else if ($_SESSION['userType']==2){
+	header("location: https://infs3202-3a14e833.uqcloud.net/lackbackers/");
+}
 ?>
 
 <!DOCTYPE html>
