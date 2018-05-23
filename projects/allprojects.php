@@ -44,11 +44,11 @@ function showUser(str) {
             <?php endwhile;?>
           </select>
       </form>
+	  <div id="txtHint"></div>	  
 	  <br>
 	  <form action="../projects/projectspdf.php">
     <input type="submit" class="btn btn-primary" value="Download as PDF" />
 	</form>
-      <div id="txtHint"></div>
     </div>
 
 </body>
