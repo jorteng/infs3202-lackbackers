@@ -31,5 +31,11 @@ while($row = mysqli_fetch_array($ajaxProjectlistresult)) {
 echo "</table>";
 mysqli_close($link);
 ?>
+<br>
+  <form onsubmit="return confirm('Do you really want to delete the project?');" action="deleteproject.php" method="POST">
+  <?php if($_SESSION['userType']==1){?>
+	  <input type="submit" class="btn btn-primary" value="Delete Project"/><?php } ?>
+	  <input type="text" name="projectid" class="form-control" value=" <?php echo $q; ?>" style="display:none">
+  </form>
 </body>
 </html>
