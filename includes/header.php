@@ -18,6 +18,7 @@ session_start();
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo $GLOBALS['URL']?>index.php">Home</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>projects/allprojects.php">Projects</a></li>
+                <li><a href="<?php echo $GLOBALS['URL']?>learning/learningMods.php">Learn</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/aboutus.php">About Us</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/faq.php">FAQ</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/rss.php">RSS</a></li>
