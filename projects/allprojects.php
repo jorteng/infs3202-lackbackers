@@ -36,6 +36,9 @@ function showUser(str) {
 <body>
     <?php require '../includes/header.php';?>
     <div class="second">
+	<form action="../projects/projectspdf.php">
+    <input type="submit" value="View All Projects" />
+	</form>
       <form>
           <select name="projects" onchange="showUser(this.value)">
             <option value="">Select a project</option>
