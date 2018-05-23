@@ -36,9 +36,6 @@ function showUser(str) {
 <body>
     <?php require '../includes/header.php';?>
     <div class="second">
-	<form action="../projects/projectspdf.php">
-    <input type="submit" value="View All Projects" />
-	</form>
       <form>
           <select name="projects" onchange="showUser(this.value)">
             <option value="">Select a project</option>
@@ -47,6 +44,10 @@ function showUser(str) {
             <?php endwhile;?>
           </select>
       </form>
+	  <br>
+	  <form action="../projects/projectspdf.php">
+    <input type="submit" class="btn btn-primary" value="Download as PDF" />
+	</form>
       <div id="txtHint"></div>
     </div>
 
