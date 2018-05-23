@@ -1,2 +1,11 @@
 PDF File Generation
 https://github.com/dompdf/dompdf/releases
+
+Web Scrapping
+https://github.com/sunra/php-simple-html-dom-parser
+
+General AJAX
+https://www.w3schools.com/xml/ajax_intro.asp
+
+Password Hashing and Cost/Salt
+http://php.net/manual/en/function.password-hash.php
