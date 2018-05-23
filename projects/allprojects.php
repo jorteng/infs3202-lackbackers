@@ -46,7 +46,7 @@ function showUser(str) {
       </form>
 	  <div id="txtHint"></div>	  
 	  <br>
-	  <form action="../projects/projectspdf.php">
+	  <form target='_blank' action="../projects/projectspdf.php">
     <input type="submit" class="btn btn-primary" value="Download as PDF" />
 	</form>
     </div>
