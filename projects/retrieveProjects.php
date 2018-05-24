@@ -10,9 +10,6 @@ $resultProjectList = mysqli_query($link, $queryProject);
 // get all projects by categories
 $filterproject = "select projects.project_title,projects.project_desc, project_owners.companyName from projects, project_owners WHERE project_owners.owner_id = projects.owner_id AND project_title like '%".$search."%'";
 $filterresult = mysqli_query($link,$filterproject);
-// get all skils lists
-$skills = "select * from skills";
-$skillresult = mysqli_query($link,$skills);
 ?>
 
 <!DOCTYPE html>
@@ -57,11 +54,7 @@ $skillresult = mysqli_query($link,$skills);
           <div class="panel panel-primary">
             <div class="panel-heading">Filter by</div>
             <div class="panel-body">
-              Skills</br>
-              <?php while($row = mysqli_fetch_array($skillresult)):?>
-                  <input type="checkbox"> <?php echo $row['description']. "</br>";?>
-              <?php endwhile ?>
-              </br>Project Title</br>
+              Project Title</br>
               <form>
                   <select name="projects" onchange="showUser(this.value)">
                     <option value="">Select a project</option>
