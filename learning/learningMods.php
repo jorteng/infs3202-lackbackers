@@ -1,67 +1,54 @@
-<!-- Main Home File -->
+<!-- Learn File -->
 <?php
-require_once 'database/db_connect.php';
+require_once '../database/db_connect.php';
 // example of how to use basic selector to retrieve HTML contents
 include('simple_html_dom.php');
-
-$html = new simple_html_dom();
-$html->load("<html><body><p>Hello World!</p><p>We're here</p></body></html>");
-
-# get an element representing the second paragraph
-$element = $html->find("p");
-
-# modify it
-$element[1]->innertext .= " and we're here to stay.";
-
-# output it!
-$element[1]->class = "class_name";
-echo $html->save();
-
-/*
-
-// get DOM from URL or file
-$html = file_get_html('http://www.google.com/');
-
-// find all link
-foreach($html->find('a') as $e)
-    echo $e->href . '<br>';
-
-// find all image
-foreach($html->find('img') as $e)
-    echo $e->src . '<br>';
-
-// find all image with full tag
-foreach($html->find('img') as $e)
-    echo $e->outertext . '<br>';
-
-// find all div tags with id=gbar
-foreach($html->find('div#gbar') as $e)
-    echo $e->innertext . '<br>';
-
-// find all span tags with class=gb1
-foreach($html->find('span.gb1') as $e)
-    echo $e->outertext . '<br>';
-
-// find all td tags with attribite align=center
-foreach($html->find('td[align=center]') as $e)
-    echo $e->innertext . '<br>';
-
-// extract text from table
-echo $html->find('td[align="center"]', 1)->plaintext.'<br><hr>';
-
-// extract text from HTML
-echo $html->plaintext;
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php require 'includes/resources.php';?>
+<?php require '../includes/resources.php';?>
 </head>
 <body>
-  <?php require 'includes/header.php';?>
-</body>
+  <div class="second">
+  <h3>Web Development</h3>
+
 <?php
-require 'includes/footer.php';
+require '../includes/header.php';
+
+$modules = array();
+getModules('https://www.codecademy.com/catalog/subject/web-development');
+
+function getModules($page) {
+
+  global $modules;
+  $html = new simple_html_dom();
+  $html->load_file($page);
+  $items = $html->find('div[class=shellHeight__2jsuWtXDSQ4ApILdDE7e25]');
+
+  foreach($items as $post) {
+    $modules[] = array($post->children(0)->outertext,
+                       $post->children(1)->outertext,
+                       $post->children(2)->outertext);
+                     }
+
+  foreach($modules as $item) {
+    echo "<div class='col-sm-4'>";
+    echo "<div class='panel-body'>";
+    echo $item[0];
+    echo $item[1];
+    echo $item[2];
+    echo "</div>";
+    echo "</div>";
+  }
+}
+$html->clear();
+
+?>
+</div>
+</body>
+
+<?php
+require '../includes/footer.php';
 ?>
 </html>

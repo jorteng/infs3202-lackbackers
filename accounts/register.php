@@ -72,16 +72,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $confirm_password_err = 'Password did not match.';
         }
     }
-    
+
     //Validate userType
 	//echo '<script language=\'javascript\'>document.getElementById("userType").innerHTML=loadRemainingForm($_POST[\'userType\'])</script>';
     if(empty($_POST['userType'])){
         $userType_err = "Please select an Account Type.";
     } else{
-        $userType = $_POST['userType'];		
+        $userType = $_POST['userType'];
 		//owner
 		if($userType == '1')
-		{   
+		{
 			//Validate companyName
 			if(empty(trim($_POST['companyName']))){
 				$companyName_err = "Company name is required.";
@@ -160,7 +160,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			}
 		}
     }
-	
+
 
 
     //Check input errors before inserting in database
@@ -182,9 +182,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					//Set parameters
 					$param_email = $email;
 					$param_password = password_hash($password, PASSWORD_BCRYPT, $option);
-					$param_userType = $userType;	
+					$param_userType = $userType;
 					mysqli_stmt_execute($stmt);
-					
+
 					$sql= "INSERT INTO project_owners(companyName, address, city, country,longitude,latitude,photoPath, userID) values (?,?,?,?,0.0,0.0,'-',(select userID from users where email = ?))";
 					if($stmt = mysqli_prepare($link, $sql)){
 						mysqli_stmt_bind_param($stmt, "sssss", $param_companyName, $param_address, $param_city, $param_country, $param_email);
@@ -222,9 +222,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					//Set parameters
 					$param_email = $email;
 					$param_password = password_hash($password, PASSWORD_BCRYPT, $option);
-					$param_userType = $userType;	
+					$param_userType = $userType;
 					mysqli_stmt_execute($stmt);
-					
+
 					$sql= "INSERT INTO freelancers(firstName, lastName, position, description, userID) values (?,?,?,?,(select userID from users where email = ?))";
 					if($stmt = mysqli_prepare($link, $sql)){
 						mysqli_stmt_bind_param($stmt, "sssss", $param_firstName, $param_lastName, $param_position, $param_description, $param_email);
@@ -265,11 +265,11 @@ function loadRemainingForm(value) {
   }
   else if(value=="1"){
 	document.getElementById("owner").style.display = "inline";
-	document.getElementById("freelancer").style.display = "none";	 
+	document.getElementById("freelancer").style.display = "none";
   }
   else{
 	document.getElementById("freelancer").style.display = "inline";
-	document.getElementById("owner").style.display = "none";	
+	document.getElementById("owner").style.display = "none";
   }
 }
 
@@ -278,7 +278,7 @@ function loadRemainingForm(value) {
 <body>
   <?php require '../includes/header.php';?>
         <div class="second">
-        <div id="" class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
         <div id="registeration" class="col-sm-3">
         <h2>Registration</h2>
         <p>Please fill the following information to register with us.</p>
@@ -352,16 +352,17 @@ function loadRemainingForm(value) {
 						<span class="help-block"><?php echo $country_err; ?></span>
 					</div>
 				</div>
-			</div>			
+			</div>
             <div class="form-group">
                 <input id="submitRegister" type="submit" class="btn btn-primary" value="Submit">
                 <input id="resetRegister" type="reset" class="btn btn-default" value="Reset">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>Already have an account? <a href="login.php"></br>Login here</a>.</p>
         </form>
     </div>
   </div>
-
-
 </body>
+<?php
+require '../includes/footer.php';
+?>
 </html>

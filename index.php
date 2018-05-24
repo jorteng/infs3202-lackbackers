@@ -24,8 +24,10 @@ require_once 'database/db_connect.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Website Design costs $450</h2>
           <p class="slide__text-desc">Delivering an aesthetically pleasing website.</p>
-          <a href=""
-          class="slide__text-link">I want this job!</a>
+          <form id="f_slider" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+            <input type="hidden" name="search" value ="website"/>
+            <a href="#" onclick="document.getElementById('f_slider').submit()"class="slide__text-link">I want this job!</a>
+          </form>
         </div>
       </div>
     </div>
@@ -38,8 +40,10 @@ require_once 'database/db_connect.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Mobile App Design costs $510</h2>
           <p class="slide__text-desc">Create a user-friendly mobile app.</p>
-          <a href=""
-          class="slide__text-link">I want this job!</a>
+          <form id="s_slider" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+            <input type="hidden" name="search" value ="mobile"/>
+            <a href="#" onclick="document.getElementById('s_slider').submit()"class="slide__text-link">I want this job!</a>
+          </form>
         </div>
       </div>
     </div>
@@ -52,8 +56,10 @@ require_once 'database/db_connect.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Architecture design costs $540</h2>
           <p class="slide__text-desc">Let your creativity goes wild on the blueprint.</p>
-          <a href=""
-          class="slide__text-link">I want this job!</a>
+          <form id="t_slider" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+            <input type="hidden" name="search" value ="architecture"/>
+            <a href="#" onclick="document.getElementById('t_slider').submit()"class="slide__text-link">I want this job!</a>
+          </form>
         </div>
       </div>
     </div>
@@ -66,8 +72,10 @@ require_once 'database/db_connect.php';
         <div class="slide__text">
           <h2 class="slide__text-heading">Logo Design costs $350</h2>
           <p class="slide__text-desc">Make good use of your skills that deliver a grand art.</p>
-          <a href=""
-          class="slide__text-link">I want this job!</a>
+          <form id="ft_slider" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+            <input type="hidden" name="search" value ="logo"/>
+            <a href="#" onclick="document.getElementById('ft_slider').submit()"class="slide__text-link">I want this job!</a>
+          </form>
         </div>
       </div>
     </div>
@@ -75,18 +83,31 @@ require_once 'database/db_connect.php';
 </div>
 </div>
 <div class="second">
+  <center><h2>Here are some of our most popular projects:</h2></center>
   <section class="section_0">
     <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Mobile Development</p></center>
+      <form id="f_circle" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+        <input type="hidden" name="search" value ="mobile"/>
+        <center><a href="#" class="circle" onclick="document.getElementById('f_circle').submit()" type="text">Mobile Development</a></center>
+      </form>
     </div>
     <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Website Development</p></center>
+      <form id="s_circle" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+        <input type="hidden" name="search" value ="website"/>
+        <center><a href="#" class="circle" onclick="document.getElementById('s_circle').submit()" type="text">Website Development</a></center>
+      </form>
     </div>
     <div class="col-sm-3">
-      <center><div class="circle"><a href="#section_4"></a></div><p>Designers & Creatives</p></center>
+      <form id="t_circle" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+        <input type="hidden" name="search" value ="design"/>
+        <center><a href="#" class="circle" onclick="document.getElementById('t_circle').submit()" type="text">Creative Designs</a></center>
+      </form>
     </div>
     <div class="col-sm-3">
-       <center><div class="circle"><a href="#section_4"></a></div><p>Writers</p></center>
+      <form id="ft_circle" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+        <input type="hidden" name="search" value ="writing"/>
+        <center><a href="#" class="circle" onclick="document.getElementById('ft_circle').submit()" type="text">Creative Writings</a></center>
+      </form>
     </div>
    </section>
   </div>

@@ -116,9 +116,12 @@ if ($_POST) {
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="register.php">Register with Us!</a></p>
+            <p>Don't have an account? <a href="register.php"></br>Register with Us!</a></p>
         </form>
         </div>
       </div>
 </body>
+<?php
+require '../includes/footer.php';
+?>
 </html>
