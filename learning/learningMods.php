@@ -10,7 +10,7 @@ include('simple_html_dom.php');
 <?php require '../includes/resources.php';?>
 </head>
 <body>
-  <div class="second">
+  <div class="modules">
   <h3>Web Development</h3>
 
 <?php

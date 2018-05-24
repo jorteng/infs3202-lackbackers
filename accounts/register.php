@@ -301,9 +301,9 @@ function loadRemainingForm(value) {
 
             <div class="form-group <?php echo (!empty($userType_err)) ? 'has-error' : ''; ?>">
               <select id="userType" name="userType" onchange="loadRemainingForm(this.value)">
-				<option value="" selected="selected">--Select Account Type--</option>
-				<option value="1" <?php if($userType==1){echo 'selected="selected"';}  ?>>Project Owners</option>
-				<option value="2" <?php if($userType==2){echo 'selected="selected"';}  ?>>Freelancer</option>
+                <option value="" selected="selected">--Select Account Type--</option>
+                <option value="1" <?php if($userType==1){echo 'selected="selected"';}  ?>>Project Owners</option>
+                <option value="2" <?php if($userType==2){echo 'selected="selected"';}  ?>>Freelancer</option>
             </select>
                 <span class="help-block"><?php echo $userType_err; ?></span>
             </div>

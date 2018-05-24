@@ -83,7 +83,7 @@ require_once 'database/db_connect.php';
 </div>
 </div>
 <div class="second">
-  <center><h2>Here are some of our most popular projects:</h2></center>
+  <center><h2>Here are some of our most popular projects!</h2></center>
   <section class="section_0">
     <div class="col-sm-3">
       <form id="f_circle" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
