@@ -73,9 +73,6 @@ function showUser(str) {
                 <?php endwhile;?>
               </select>
           </form>
-          <form target='_blank' action="../projects/projectspdf.php">
-          </br><input type="submit" class="btn btn-primary" value="Download as PDF" />
-          </form>
         </div>
       </div>
   </div>
