@@ -17,19 +17,18 @@ session_start();
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo $GLOBALS['URL']?>index.php">Home</a></li>
-                <li><a href="<?php echo $GLOBALS['URL']?>projects/allprojects.php">Projects</a></li>
+                <li><a href="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">Projects</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>learning/learningMods.php">Learn</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/aboutus.php">About Us</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/faq.php">FAQ</a></li>
                 <li><a href="<?php echo $GLOBALS['URL']?>information/rss.php">RSS</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><form class="navbar-form" role="search">
-                  <div class="input-group">
-                  <!--  <input type="text" size="30" onkeyup="showResult(this.value)" placeholder="Search for projects.." title="Type in a project" style="border: 6px solid white;">
-                    <div id="search"></div>-->
-                    <input type="text" id="myinput" onkeyup="myFunction()" placeholder="Search for projects.." title="Type in a project name" style="border: 6px solid white;">
-                    <div class="input-group-btn"><button class="btn btn-primary" type="submit"><i class=" glyphicon glyphicon-search"></i></button></div>
+              <li>
+                <form class="navbar-form" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
+                  <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" name="search" placeholder="Search for projects.." title="Type in a project name" style="border: 6px solid white;">
+                    <div class="input-group-btn"><button class=" btn btn-primary" type="submit"><span class="icon-button glyphicon glyphicon-search"></span></button></div>
                   </div>
                 </form>
               </li>

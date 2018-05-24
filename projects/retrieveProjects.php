@@ -19,6 +19,27 @@ $skillresult = mysqli_query($link,$skills);
 <html lang="en">
 <head>
     <?php require '../includes/resources.php';?>
+    <script>
+    function showUser(str) {
+      if (str.length==0) {
+        document.getElementById("txtHint").innerHTML="";
+        return;
+      }
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      } else { // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+          document.getElementById("txtHint").innerHTML=this.responseText;
+        }
+      }
+      xmlhttp.open("GET","retrieveallprojects.php?q="+str,true);
+      xmlhttp.send();
+    }
+    </script>
 </head>
 <body>
     <?php require '../includes/header.php';?>
@@ -27,9 +48,10 @@ $skillresult = mysqli_query($link,$skills);
       <div class="input-group stylish-input-group">
             <input type="text" class="form-control" name="search" placeholder="Search">
             <span class="input-group-addon">
-            <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-        </div></br>
+            <button class="icon-button" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+      </form></br>
         <div="row">
         <div class="col-sm-4">
           <div class="panel panel-primary">
@@ -48,17 +70,20 @@ $skillresult = mysqli_query($link,$skills);
                     <?php endwhile;?>
                   </select>
               </form>
+              <form target='_blank' action="../projects/projectspdf.php">
+              </br><input type="submit" class="btn btn-primary" value="Download as PDF" />
+              </form>
             </div>
           </div>
       </div>
       <div class="col-sm-8">
       <div class="panel panel-primary">
       <div class="panel-heading"> Project Lists </div>
-      <div class="panel-body">
+      <div id="txtHint" class="panel-body">
         <?php while($row = mysqli_fetch_array($filterresult)):?>
             <?php echo $row['project_title']. "</br>";?>
             <?php echo $row['companyName']. "</br>";?>
-            <?php echo $row['project_desc']. "</br></br>";?>
+            <?php echo $row['project_desc']. "</br><hr>";?>
         <?php endwhile ?>
       </div>
     </div>
@@ -67,3 +92,6 @@ $skillresult = mysqli_query($link,$skills);
 </div>
 </body>
 </html>
+<?php
+require '../includes/footer.php';
+?>

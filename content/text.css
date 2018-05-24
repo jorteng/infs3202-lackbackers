@@ -1,3 +1,12 @@
+/* search icon size */
+.icon-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -78,13 +87,27 @@
 }
 
 /* Overide the jumbotron vies */
-.jumbotron{
+/* .jumbotron{
+  position: fixed;
+  left: 0;
   width: 100%;
   background-color: #2C1A55 !important;
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+  margin-top: 0px;
+  padding-bottom: 0px !important;
   color: #FFFFFF !important;
 
+} */
+
+.foot{
+  background-color: #061551;
+  color: #FFFFFF;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  margin-top: -180px;
+  clear: both;
 }
 
 /* Text written on the overlay */
@@ -101,15 +124,15 @@
 
 /* Second section after jumbotron */
 .second{
-      padding: 60px;
+      padding: 100px;
       background-color: #FFFFFF;
       color: #5933AA;
-      padding-top: 120px;
+      padding-top: 60px;
       padding-bottom: 350px;
       font-size: 15px;
+
 }
 
-/* Second section after jumbotron */
 .modules{
       padding: 60px;
       background-color: #FFFFFF;
@@ -117,7 +140,9 @@
       padding-top: 120px;
       padding-bottom: 350px;
       font-size: 15px;
+
 }
+
 
 /* Icon size on the index.php */
 .hicon{
@@ -164,95 +189,6 @@
   margin-left: 60px !important;
   margin-top:-60px !important;
 }
-
-
-
- /* .tabbable-panel {
-  border:1px solid #eee;
-  padding: 10px;
-}
-
-.tabbable-line > .nav-tabs {
-  border: none;
-  margin: 0px;
-}
-.tabbable-line > .nav-tabs > li {
-  margin-right: 2px;
-}
-.tabbable-line > .nav-tabs > li > a {
-  border: 0;
-  margin-right: 0;
-  color: #737373;
-}
-.tabbable-line > .nav-tabs > li > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid #fbcdcf;
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-  border: 0;
-  background: none !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #f3565d;
-  position: relative;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-  border: 0 !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
-  color: #404040;
-}
-.tabbable-line > .tab-content {
-  margin-top: -3px;
-  background-color: #fff;
-  border: 0;
-  border-top: 1px solid #eee;
-  padding: 15px 0;
-}
-.portlet .tabbable-line > .tab-content {
-  padding-bottom: 0;
-} */
-
-/* Below tabs mode */
-
-/* .tabbable-line.tabs-below > .nav-tabs > li {
-  border-top: 4px solid transparent;
-}
-.tabbable-line.tabs-below > .nav-tabs > li > a {
-  margin-top: 0;
-}
-.tabbable-line.tabs-below > .nav-tabs > li:hover {
-  border-bottom: 0;
-  border-top: 4px solid #fbcdcf;
-}
-.tabbable-line.tabs-below > .nav-tabs > li.active {
-  margin-bottom: -2px;
-  border-bottom: 0;
-  border-top: 4px solid #f3565d;
-}
-.tabbable-line.tabs-below > .tab-content {
-  margin-top: -10px;
-  border-top: 0;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-}
-
-.menu_title {
-    padding: 15px 10px;
-    border-bottom: 1px solid #eee;
-    margin: 0 5px;
-} */
-
 
 @media (max-width:768px){
 
@@ -352,6 +288,9 @@
   color: #5c5eae;
   line-height: 50px;
   overflow: hidden;
+  text-decoration: none;
+  font-size: 24px;
+
 }
 
 .circle:hover {
@@ -374,11 +313,5 @@
 }
 
 .circle a {
-  text-decoration: none;
   color: #1d2087;
-}
-
-.circle p {
-  font-size: 24px;
-  line-height: 26px;
 }
