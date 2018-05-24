@@ -11,6 +11,7 @@ include('simple_html_dom.php');
 </head>
 <body>
   <div class="modules">
+    <h3>Recommended Courses to Upgrade your Skills!</h3>
   <a href = "https://www.codecademy.com/catalog/subject/web-development" target="_blank"><h3>Web Development Courses @ Code Cademy</h3></a>
 <?php
 require '../includes/header.php';
@@ -33,7 +34,7 @@ function getModules($page) {
                      $post->children(3)->outertext);
                      }
   foreach($modules as $item) {
-    echo "<div class='col-sm-4'>";
+    echo "<div class='col-sm-3'>";
     echo "<div class='panel-body'>";
     echo $item[0];
     echo $item[1];
