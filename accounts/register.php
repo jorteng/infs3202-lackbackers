@@ -2,6 +2,11 @@
 //Connect to db
 require_once '../database/db_connect.php';
 
+session_start();
+if(isset($_SESSION['own_id'])){
+    header("location: https://infs3202-3a14e833.uqcloud.net/lackbackers/");
+}
+
 //Define variables and initialize with empty values
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
