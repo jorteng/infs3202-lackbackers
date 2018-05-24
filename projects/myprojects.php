@@ -86,7 +86,8 @@ function showUser(str) {
     <?php while($row = mysqli_fetch_array($resultProjectView)):;?>
         <?php echo $row['project_title']. "</br>";?>
         <?php echo $row['companyName']. "</br>";?>
-        <?php echo $row['project_desc']. "</br><hr>";?>
+        <?php echo $row['project_desc']. "</br>";?>
+		<?php echo "<a href='" . $row['photoPath']. "'>Click here for project photo</a></br><hr>";?>
     <?php endwhile; ?>
   </div>
   </div>

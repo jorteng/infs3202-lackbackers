@@ -8,7 +8,7 @@ require_once '../database/db_connect.php';
 $queryProject = "SELECT * FROM `projects`";
 $resultProjectList = mysqli_query($link, $queryProject);
 // get all projects by categories
-$filterproject = "select projects.project_title,projects.project_desc, project_owners.companyName from projects, project_owners WHERE project_owners.owner_id = projects.owner_id AND project_title like '%".$search."%'";
+$filterproject = "select projects.project_title,projects.project_desc, projects.photoPath, project_owners.companyName from projects, project_owners WHERE project_owners.owner_id = projects.owner_id AND project_title like '%".$search."%'";
 $filterresult = mysqli_query($link,$filterproject);
 ?>
 
@@ -73,11 +73,12 @@ $filterresult = mysqli_query($link,$filterproject);
       <div class="panel panel-primary">
       <div class="panel-heading"> Project Lists </div>
       <div id="txtHint" class="panel-body">
-        <?php while($row = mysqli_fetch_array($filterresult)):?>
+        <?php while($row = mysqli_fetch_array($filterresult)):;?>
             <?php echo $row['project_title']. "</br>";?>
             <?php echo $row['companyName']. "</br>";?>
-            <?php echo $row['project_desc']. "</br><hr>";?>
-        <?php endwhile ?>
+            <?php echo $row['project_desc']. "</br>";?>
+			<?php echo "<a href='" . $row['photoPath']. "'>Click here for project photo</a></br><hr>";?>
+        <?php endwhile; ?>
       </div>
     </div>
   </div>
