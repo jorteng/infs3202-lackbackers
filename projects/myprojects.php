@@ -9,13 +9,15 @@ if(!isset($_SESSION['own_id'])){
 $own_id = $_SESSION['own_id'];
 //Dropdown list for Project Selection
 if($_SESSION['userType']==1){
-  $queryProject = "SELECT * FROM `projects` where owner_id = $own_id";
+  $queryProject = "SELECT * FROM projects where owner_id = $own_id";
   $resultProjectList = mysqli_query($link, $queryProject);
+  $resultProjectView= mysqli_query($link, $queryProject);
 }
 
 else if($_SESSION['userType']==2){
   $queryProject = "SELECT * from projects WHERE project_id IN (SELECT projectID from freelancerProjects WHERE freelancerID = $own_id)";
   $resultProjectList = mysqli_query($link, $queryProject);
+  $resultProjectView= mysqli_query($link, $queryProject);
 }
 
 ?>
@@ -57,12 +59,12 @@ function showUser(str) {
       </span>
     </div>
   </form></br>
-    <div="row">
+  <div="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Filter by</div>
         <div class="panel-body">
-          </br>Project Title</br>
+          Project Title</br>
           <form>
               <select name="projects" onchange="showUser(this.value)">
                 <option value="">Select a project</option>
@@ -81,15 +83,14 @@ function showUser(str) {
   <div class="panel panel-primary">
   <div class="panel-heading"> Project Lists </div>
   <div id="txtHint" class="panel-body">
-    <?php while($row = mysqli_fetch_array($resultProjectList)):?>
+    <?php while($row = mysqli_fetch_array($resultProjectView)):;?>
         <?php echo $row['project_title']. "</br>";?>
         <?php echo $row['companyName']. "</br>";?>
         <?php echo $row['project_desc']. "</br><hr>";?>
-    <?php endwhile ?>
+    <?php endwhile; ?>
   </div>
-</div>
-</div>
-</div>
+  </div>
+  </div>
 </div>
 </body>
 </html>
