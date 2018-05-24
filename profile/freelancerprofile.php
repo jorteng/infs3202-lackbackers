@@ -46,7 +46,7 @@ else if ($_SESSION['userType']==1){
                     <h4 class="modal-title">Edit Profile</h4>
                </div>
                <div class="modal-body">
-                    <form method="post" id="insert_form">
+                    <form method="post" id="update_form">
                          <label>Enter First Name</label>
                          <input type="text" name="firstname" id="firstname" value="<?php echo htmlspecialchars($_SESSION['name'])?>" class="form-control" />
                          <br />
@@ -61,7 +61,7 @@ else if ($_SESSION['userType']==1){
                          <br />
                          <input type="hidden" name="own_id" id="own_id" value ="<?php echo htmlspecialchars($_SESSION['own_id'])?>" />
                          <input type="hidden" name="userType" id="userType" value ="<?php echo htmlspecialchars($_SESSION['userType'])?>" />
-                         <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
+                         <input type="submit" name="update" id="update" value="update" class="btn btn-success" />
                     </form>
                </div>
                <div class="modal-footer">
@@ -73,7 +73,7 @@ else if ($_SESSION['userType']==1){
 <script>
 $(document).ready(function(){
 
-     $('#insert_form').on("submit", function(event){
+     $('#update_form').on("submit", function(event){
           event.preventDefault();
           if($('#firstname').val() == "")
           {
@@ -94,14 +94,14 @@ $(document).ready(function(){
           else
           {
                $.ajax({
-                    url:"insert.php",
+                    url:"update.php",
                     method:"POST",
-                    data:$('#insert_form').serialize(),
+                    data:$('#update_form').serialize(),
                     beforeSend:function(){
-                         $('#insert').val("Inserting");
+                         $('#update').val("updating");
                     },
                     success:function(data){
-                         $('#insert_form')[0].reset();
+                         $('#update_form')[0].reset();
                          $('#myModal').modal('hide');
                          $('#details').html(data);
                     }

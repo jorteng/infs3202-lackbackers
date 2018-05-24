@@ -6,12 +6,10 @@
 
 #main_slider {
   font-size: 62.5%;
-  height: 100vh;
+  height: 85vh;
   width:100% ;
   overflow: hidden;
 }
-
-
 
 svg {
   display: block;
