@@ -85,7 +85,7 @@ function showUser(str) {
         <?php echo $row['project_title']. "</br>";?>
         <?php echo $row['companyName']. "</br>";?>
         <?php echo $row['project_desc']. "</br>";?>
-		<?php echo "<a href='" . $row['photoPath']. "'>Click here for project photo</a></br><hr>";?>
+		<?php echo "<a href='" . $row['photoPath']. "' target=\"_blank\">Click here for project photo</a></br><hr>";?>
     <?php endwhile; ?>
   </div>
   </div>
