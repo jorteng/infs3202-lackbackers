@@ -26,10 +26,7 @@ session_start();
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <form class="navbar-form" method="GET" action="<?php echo $GLOBALS['URL']?>projects/retrieveProjects.php">
-                  <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control" name="search" placeholder="Search for projects.." title="Type in a project name" style="border: 6px solid white;">
-                    <div class="input-group-btn"><button class=" btn btn-primary" type="submit"><span class="icon-button glyphicon glyphicon-search"></span></button></div>
-                  </div>
+
                 </form>
               </li>
             <?php if(!isset($_SESSION['email']) || empty($_SESSION['email'])){ ?>
