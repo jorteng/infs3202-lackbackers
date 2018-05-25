@@ -3,6 +3,7 @@
 //Connect to db
 require_once '../database/db_connect.php';
 session_start();
+$search = $_GET["search"];
 if(!isset($_SESSION['own_id'])){
     header("location: https://infs3202-3a14e833.uqcloud.net/lackbackers/accounts/login.php");
 }
@@ -12,13 +13,15 @@ $own_id = $_SESSION['own_id'];
 if($_SESSION['userType']==1){
   $queryProject = "SELECT * FROM projects where owner_id = $own_id";
   $resultProjectList = mysqli_query($link, $queryProject);
-  $resultProjectView= mysqli_query($link, $queryProject);
+  $searchProject = "SELECT * FROM projects where owner_id = $own_id AND project_title like '%".$search."%'";
+  $searchresult = mysqli_query($link, $searchProject);
 }
 
 else if($_SESSION['userType']==2){
   $queryProject = "SELECT * from projects WHERE project_id IN (SELECT projectID from freelancerProjects WHERE freelancerID = $own_id)";
   $resultProjectList = mysqli_query($link, $queryProject);
-  $resultProjectView= mysqli_query($link, $queryProject);
+  $searchProject = "SELECT * from projects WHERE project_id IN (SELECT projectID from freelancerProjects WHERE freelancerID = $own_id) AND project_title like '%".$search."%'";
+  $searchresult = mysqli_query($link, $searchProject);
 }
 
 ?>
@@ -74,6 +77,9 @@ function showUser(str) {
                 <?php endwhile;?>
               </select>
           </form>
+		  <form target='_blank' action="../projects/projectspdf.php">
+			</br><input type="submit" class="btn btn-primary" value="Download as PDF" />
+          </form>
         </div>
       </div>
   </div>
@@ -81,7 +87,7 @@ function showUser(str) {
   <div class="panel panel-primary">
   <div class="panel-heading"> Project Lists </div>
   <div id="txtHint" class="panel-body">
-    <?php while($row = mysqli_fetch_array($resultProjectView)):;?>
+    <?php while($row = mysqli_fetch_array($searchresult)):;?>
         <?php echo $row['project_title']. "</br>";?>
         <?php echo $row['companyName']. "</br>";?>
         <?php echo $row['project_desc']. "</br>";?>
