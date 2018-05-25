@@ -46,7 +46,7 @@ function showUser(str) {
       document.getElementById("txtHint").innerHTML=this.responseText;
     }
   }
-  xmlhttp.open("GET","retrieveallprojects.php?q="+str,true);
+  xmlhttp.open("GET","getmyprojects.php?q="+str,true);
   xmlhttp.send();
 }
 </script>
@@ -77,8 +77,7 @@ function showUser(str) {
                 <?php endwhile;?>
               </select>
           </form>
-		  <form target='_blank' action="../projects/projectspdf.php">
-			</br><input type="submit" class="btn btn-primary" value="Download as PDF" />
+
           </form>
         </div>
       </div>

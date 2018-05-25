@@ -22,14 +22,9 @@ try {
 
     //Recipients
     $mail->setFrom('noreply@uq.edu.au', 'Mailer');
-    $mail->addAddress('r.roesly@uqconnect.edu.au', 'Rachel Roesly');     // Add a recipient
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+    // replace YOUREMAIL the email address you wish to receive mail from here.
+    $mail->addAddress('YOUREMAIL', 'Admin');     // Add a recipient
 
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML

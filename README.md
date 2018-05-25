@@ -27,3 +27,4 @@ To Run Codes
 3. Import the '.sql' file in '.zip' file into PHPmyadmin.
 4. Amend the 'database/credentials.php' file according to the comments found within the file.
 5. Insert your own Google API key according to the comments in the file, 'information/aboutus.php' in order for the google map to work.
+6. Change folder permission of your image upload directory to '777' in order for image upload of the 'createproject.php' to work.

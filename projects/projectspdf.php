@@ -1,4 +1,3 @@
-<!-- Projects PDF Generation File-->
 <?php
 //index.php
 //include autoloader
@@ -52,5 +51,7 @@ $document->render();
 //get the output in browser
 $document->stream("AllProjects",array("Attachment"=>0));
 //1 = download
-//0 = preview
+//0 = preview 
+
+
 ?>

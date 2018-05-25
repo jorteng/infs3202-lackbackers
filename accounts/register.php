@@ -94,9 +94,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$address_err = "Address is required.";
 			} else{
 				$address = trim($_POST['address']);
-				if (!preg_match("/^[a-zA-Z ]*$/",$address)){
-				  $address_err = "Only letters and white space allowed";
-				}
 			}
 			//Validate city
 			if(empty(trim($_POST['city']))){
