@@ -1,11 +1,14 @@
-PDF File Generation
+1. PDF File Generation
 https://github.com/dompdf/dompdf/releases
 
-Web Scrapping
+2. Web Scrapping
 https://github.com/sunra/php-simple-html-dom-parser
 
-General AJAX
+3. Sending of Email
+https://github.com/PHPMailer/PHPMailer
+
+4. General AJAX
 https://www.w3schools.com/xml/ajax_intro.asp
 
-Password Hashing and Cost/Salt
+5. Password Hashing and Cost/Salt
 http://php.net/manual/en/function.password-hash.php
