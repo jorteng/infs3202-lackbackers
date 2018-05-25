@@ -88,8 +88,6 @@ if ($_POST) {
     $_SESSION['description'] = $description;
     $_SESSION['fullName'] = $full_name;
     header('location: /lackbackers');
-    // header('location: /infs3202-lackbackers');
-
     }
 }
 ?>

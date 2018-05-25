@@ -27,7 +27,7 @@ require_once '../database/db_connect.php';
       });
     }
   </script>
-
+  // Enter your Google API here for the map to work
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBctTtjL3tGAJ2KZ191-8ClCRIpRZgNPz4&callback=initMap">
   </script>

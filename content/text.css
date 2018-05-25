@@ -86,18 +86,6 @@
   overflow: hidden;
 }
 
-/* Overide the jumbotron vies */
-/* .jumbotron{
-  position: fixed;
-  left: 0;
-  width: 100%;
-  background-color: #2C1A55 !important;
-  margin-top: 0px;
-  padding-bottom: 0px !important;
-  color: #FFFFFF !important;
-
-} */
-
 .foot{
   background-color: #061551;
   color: #FFFFFF;
@@ -119,7 +107,6 @@
   font-weight: bold;
   font-size: 45px;
   padding-right: 450px;
-
 }
 
 /* Second section after jumbotron */
@@ -130,7 +117,6 @@
       padding-top: 90px;
       padding-bottom: 350px;
       font-size: 15px;
-
 }
 
 .modules{
@@ -141,7 +127,6 @@
       padding-bottom: 350px;
       font-size: 14px;
 }
-
 
 /* Icon size on the index.php */
 .hicon{
@@ -204,7 +189,7 @@
 }
 }
 
-/* For the about us page's map */
+/* For the aboutus page's map */
 #main {
   transition: margin-left .5s;
   padding: 16px;
@@ -250,7 +235,6 @@
 }
 
 /* responsive circle hover */
-
 .circle {
   margin: 36px;
   display: inline-block;
