@@ -17,11 +17,6 @@ $firstName_err = $lastName_err = $position_err = $description_err = "";
 $companyName = $address = $city = $country = "";
 $companyName_err = $address_err = $city_err = $country_err = "";
 
-
-//Dropdown list for Registration
-$queryAccType = "SELECT * FROM `accounts_type`";
-$resultAccTypeList = mysqli_query($link, $queryAccType);
-
 //Process form data
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //Validate email

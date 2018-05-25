@@ -50,8 +50,9 @@ if ($_POST) {
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
-            $result = $stmt->get_result();
-            $owner = $result->fetch_assoc();
+
+      $result = $stmt->get_result();
+      $owner = $result->fetch_assoc();
 			$name = $owner['companyName'];
 			$own_id = $owner['owner_id'];
       $address = $owner['address'];
@@ -64,8 +65,9 @@ if ($_POST) {
 			$stmt->execute();
 			$stmt->store_result();
 			$stmt->execute();
-            $result = $stmt->get_result();
-            $freelancer = $result->fetch_assoc();
+
+      $result = $stmt->get_result();
+      $freelancer = $result->fetch_assoc();
 			$name = $freelancer['firstName'];
       $last_name = $freelancer['lastName'];
 			$own_id = $freelancer['freelance_id'];
