@@ -1,5 +1,6 @@
-<!-- Welcome <?php echo $_GET["search"]; ?>.<br /> -->
+<!-- Retrieve All Projects Main File -->  
 <?php
+//echo $_GET["search"];
 $search = $_GET["search"];
 
 require_once '../database/db_connect.php';
@@ -86,6 +87,3 @@ $filterresult = mysqli_query($link,$filterproject);
 </div>
 </body>
 </html>
-<?php
-require '../includes/footer.php';
-?>

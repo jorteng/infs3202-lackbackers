@@ -136,4 +136,3 @@ require_once 'database/db_connect.php';
 </div>
 </body>
 </html>
-<?php require 'includes/footer.php';?>

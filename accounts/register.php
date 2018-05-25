@@ -1,3 +1,4 @@
+<!-- Registration File -->
 <?php
 require_once '../database/db_connect.php';
 
@@ -356,7 +357,4 @@ function loadRemainingForm(value) {
     </div>
   </div>
 </body>
-<?php
-require '../includes/footer.php';
-?>
 </html>

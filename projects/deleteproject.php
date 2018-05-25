@@ -1,3 +1,4 @@
+<!-- Delete Projects File-->
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -15,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 	else
 	{
-		echo "<script>alert('Error in deleting');</script>"; 
+		echo "<script>alert('Error in deleting');</script>";
 	}
 }
 ?>

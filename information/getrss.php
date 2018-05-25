@@ -1,3 +1,4 @@
+<!-- RSS AJAX File -->
 <?php
 //get the q parameter from URL
 $q=$_GET["q"];

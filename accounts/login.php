@@ -1,4 +1,4 @@
-<!-- Login Page File -->
+<!-- Login File -->
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
@@ -121,7 +121,4 @@ if ($_POST) {
         </div>
       </div>
 </body>
-<?php
-require '../includes/footer.php';
-?>
 </html>

@@ -1,3 +1,4 @@
+<!-- Retrieve Projects AJAX File-->
 <?php
 $q = intval($_GET['q']);
 require_once '../database/db_connect.php';

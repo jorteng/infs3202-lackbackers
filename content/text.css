@@ -1,3 +1,4 @@
+/* Main CSS File */
 /* search icon size */
 .icon-button {
     appearance: none;
@@ -84,18 +85,6 @@
   filter: opacity(30%);
   position: relative;
   overflow: hidden;
-}
-
-.foot{
-  background-color: #061551;
-  color: #FFFFFF;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  font-size: 15px;
-  text-align: center;
-  position: relative;
-  margin-top: -180px;
-  clear: both;
 }
 
 /* Text written on the overlay */

@@ -136,6 +136,5 @@ EOT;
 if (!empty($msg)) {
     echo '<script type="text/javascript">alert("' . $msg . '")</script>';}
 
-require '../includes/footer.php';
 ?>
 </html>

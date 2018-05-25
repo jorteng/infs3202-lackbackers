@@ -43,12 +43,9 @@ function getModules($page) {
     echo "</div>";
   }
 }
+
+$html->clear();
 ?>
 </div>
 </body>
-
-<?php
-$html->clear();
-require '../includes/footer.php';
-?>
 </html>

@@ -1,5 +1,5 @@
+<!-- Main Database File -->
 <?php
-
 require_once 'credentials.php';
 //Create connection
 $link = new mysqli($servername, $username, $password, $db_name);

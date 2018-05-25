@@ -1,3 +1,4 @@
+<!-- Web Scrapping Library File -->
 <?php
 /**
  * Website: http://sourceforge.net/projects/simplehtmldom/

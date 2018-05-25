@@ -1,3 +1,4 @@
+<!-- Freelancer Profile File -->
 <?php
 //Connect to db
 require_once '../database/db_connect.php';

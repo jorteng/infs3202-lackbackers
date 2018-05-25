@@ -1,4 +1,4 @@
-<!-- Shared Header -->
+<!-- Shared Header File-->
 <?php
 session_start();
 ?>

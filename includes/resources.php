@@ -1,3 +1,4 @@
+<!-- Resources File -->
 <?php
 // $GLOBALS['URL'] = "http://localhost/infs3202-lackbackers/";
 $GLOBALS['URL'] = "https://infs3202-3a14e833.uqcloud.net/lackbackers/";

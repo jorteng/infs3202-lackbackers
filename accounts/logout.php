@@ -1,3 +1,4 @@
+<!-- Logout File -->
 <?php
 session_start();
 //Destroy all Sessions

@@ -1,3 +1,4 @@
+<!-- Retrieve own Projects Main File-->
 <?php
 //Connect to db
 require_once '../database/db_connect.php';
@@ -92,6 +93,3 @@ function showUser(str) {
 </div>
 </body>
 </html>
-<?php
-require '../includes/footer.php';
-?>

@@ -40,11 +40,5 @@ function showRSS(str) {
   </form>
   <div id="rssOutput"></div>
   </div>
-
-
 </body>
 </html>
-
-<?php
-require '../includes/footer.php';
-?>
