@@ -17,6 +17,7 @@ The website uses technologies like PHP, AJAX, XML and more. Additionally, some o
 - Sending of emails for queries
 - Web scrapping of modules suggested for users to learn, improving their skills as a freelancers
 - PDF file generation of projects for users
+- SQL injection mitigation is done my using mysqli prepared statements
 
 4. There are also other features available on the website, do browse through it for a better and more personal understanding.
 

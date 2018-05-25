@@ -7,8 +7,6 @@
       $output_body = '';
       $message = '';
 
-
-
       if($_POST["own_id"] != '')
       {
           if($_POST["userType"] == 2)

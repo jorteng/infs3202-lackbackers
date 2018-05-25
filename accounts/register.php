@@ -50,7 +50,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Something went wrong. Please try again later.";
             }
         }
-
         //Close statement
         mysqli_stmt_close($stmt);
     }
@@ -72,7 +71,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $confirm_password_err = 'Password did not match.';
         }
     }
-
     //Validate userType
 	//echo '<script language=\'javascript\'>document.getElementById("userType").innerHTML=loadRemainingForm($_POST[\'userType\'])</script>';
     if(empty($_POST['userType'])){
@@ -160,9 +158,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			}
 		}
     }
-
-
-
     //Check input errors before inserting in database
     if(empty($email_err) && empty($password_err) && empty($userType_err)){
 		//owner
