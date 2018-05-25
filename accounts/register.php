@@ -180,7 +180,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					$param_userType = $userType;
 					mysqli_stmt_execute($stmt);
 
-					$sql= "INSERT INTO project_owners(companyName, address, city, country,longitude,latitude,photoPath, userID) values (?,?,?,?,0.0,0.0,'-',(select userID from users where email = ?))";
+					$sql= "INSERT INTO project_owners(companyName, address, city, country, photoPath, userID) values (?,?,?,?,'-',(select userID from users where email = ?))";
 					if($stmt = mysqli_prepare($link, $sql)){
 						mysqli_stmt_bind_param($stmt, "sssss", $param_companyName, $param_address, $param_city, $param_country, $param_email);
 						$param_companyName = $companyName;
